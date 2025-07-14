@@ -1,29 +1,69 @@
-name: Get Citation Data
+name: Get Citation Data   # 工作流名称，可自行调整
 
-on: 
- page_build: 
- schedule:
-  - cron:  '0 8 * * *'
+###############################################################################
+# 触发方式：
+#   • workflow_dispatch     👉 允许在 Actions 页面手动点击 “Run workflow”
+#   • schedule              👉 每周 UTC 8:00（北京时间 16:00）自动运行一次
+###############################################################################
+on:
+  workflow_dispatch:
+  schedule:
+    # ┌───────── 分 (0-59)
+    # │ ┌─────── 时 (0-23)   8 = UTC 08:00
+    # │ │ ┌───── 日 (1-31)
+    # │ │ │ ┌─── 月 (1-12)
+    # │ │ │ │ ┌─ 周 (0-6) 0 = Sunday
+    # │ │ │ │ │
+    - cron: '0 8 * * 0'   # 👉 每周日 08:00 UTC 触发（即北京时间周日 16:00）
 
+###############################################################################
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
-    - name: Install Reqs
+    # 1) Checkout 代码（不保留 GitHub 默认只读 token）
+    - uses: actions/checkout@v3
+      with:
+        persist-credentials: false
+
+    # 2) 安装 Python & 依赖
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
       run: |
-        sudo apt-get install python3-setuptools
-    - name: Run
-      run: |
-        cd ./google_scholar_crawler
-        pip3 install -r requirements.txt
-        python3 main.py
-        cd ./results
-        git init
-        git config --local user.name "${GITHUB_ACTOR}"
-        export remote_repo="https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
-        git add *.json
-        git commit -m "Updated Citation Data"
-        git push "${remote_repo}" HEAD:google-scholar-stats --force
-      env: 
+        sudo apt-get update -y
+        sudo apt-get install -y python3-setuptools
+        pip3 install -r google_scholar_crawler/requirements.txt
+
+    # 3) 运行爬虫脚本，生成 JSON 数据到 google_scholar_crawler/results
+    - name: Run Google Scholar crawler
+      env:
         GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID }}
+      run: |
+        cd google_scholar_crawler
+        python3 main.py
+
+    # 4) 提交 JSON 到 google-scholar-stats 分支
+    - name: Commit & push citation data
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # GitHub 自动注入的写入 token
+      run: |
+        cd google_scholar_crawler/results
+
+        # 设置提交身份
+        git init
+        git config user.name  "${{ github.actor }}"
+        git config user.email "${{ github.actor }}@users.noreply.github.com"
+
+        # 添加并提交
+        git add *.json
+        git commit -m "📚 update citation data" || echo "no changes"
+
+        # 推送到 google-scholar-stats 分支
+        git branch -M google-scholar-stats
+        git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
+        git push -u origin google-scholar-stats --force
