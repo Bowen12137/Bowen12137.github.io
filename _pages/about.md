@@ -17,39 +17,82 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I am a Master’s graduate in Artificial Intelligence from the University of Manchester, with a deep passion for building intelligent systems that learn, perceive, and act in the real world. My research bridges **deep learning**, **generative modeling**, and **autonomous systems**, with a focus on enabling robust, interpretable, and generalizable AI agents.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+My long-term goal is to develop autonomous agents capable of *accurate perception*, *goal-directed decision making*, and *continual learning* in complex, uncertain environments. In particular, I am fascinated by **diffusion models**, **vision-language systems**, and **embodied intelligence**. I believe these are key ingredients for the next generation of interactive AI systems.
+
+I have hands-on experience in:
+- End-to-end autonomous driving and personalized trajectory generation;
+- Multimodal learning (vision, language, control);
+- Video generation, GNNs, reinforcement learning, and real-world dataset curation.
+
+Currently, I am seeking a PhD position in the UK or globally where I can explore the intersection of **generative models**, **robotics**, and **embodied cognition**.
+
+> If you're building the future of grounded, generative, and human-aligned AI — let’s connect.
+
+[Google Scholar](https://scholar.google.com/) • [GitHub](https://github.com/) • [LinkedIn](https://linkedin.com/)
+
 
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2025.07*: &nbsp;🚀 Our paper **"StyleDrive: Towards Driving-Style Aware Benchmarking of End-to-End Autonomous Driving"** is now on arXiv! [Read here](https://arxiv.org/abs/2506.23982)
+- *2025.06*: &nbsp;🎉 I received a Distinction (85%) for my Master's final project on comparative analysis of Deep Learning vs Traditional CV in robotic perception, ranking top 10% in class.
+
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Course Project 2024</div><img src='images/project_cv.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
+[**Comparative Analysis of Deep Learning and Traditional Computer Vision in Robotic Vision**](https://drive.google.com/file/d/12L-lZoBxPLFMu5bqIUWveo-UyAP-Q3OF/view?usp=sharing)  
+**Bowen Jing**
 
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+[**Project Report**](https://drive.google.com/file/d/12L-lZoBxPLFMu5bqIUWveo-UyAP-Q3OF/view?usp=sharing)  
+- Achieved 85%, analyzed robustness and generalization of ResNet, ViT, and BoVW under different noise levels.
+- Contributed experimental datasets and comparative benchmarks.
+</div></div>
 
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Course Project 2024</div><img src='images/project_nlp.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+[**Sentence-Level Relation Extraction with Transformer-based and GCN Models**](https://drive.google.com/file/d/1-8UGvDrBVcWMseC0Id7IasmWdYwvWMUk/view?usp=sharing)  
+**Bowen Jing**
 
-# 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+[**Project Report**](https://drive.google.com/file/d/1-8UGvDrBVcWMseC0Id7IasmWdYwvWMUk/view?usp=sharing)  
+- Reached 92.75%, top 5 in class. Benchmarked PA-LSTM, C-GCN, BERT/RoBERTa on TACRED, TACREV, and Re-TACRED.
+- Designed custom entity marker and contributed few-shot + length-variant splits for robustness testing.
+</div></div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Course Project 2024</div><img src='images/project_e2e.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**End-to-End Autonomous Driving System with Middle Fusion and Attention**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
+**Bowen Jing**
+
+[**Project Report**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
+- Built a multimodal AV system integrating LiDAR and RGB via channel-attentive fusion.
+- Deployed in CARLA and validated via extensive ablation studies.
+</div></div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Benchmark Paper 2025</div><img src='images/styledrive.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**StyleDrive: Towards Driving-Style Aware Benchmarking of End-to-End Autonomous Driving**](https://arxiv.org/abs/2506.23982)  
+**Bowen Jing**, Ruiyang Hao, Haibao Yu, Zaiqing Nie
+
+[**arXiv**](https://arxiv.org/abs/2506.23982) • [**GitHub**](https://github.com/style-drive/StyleDrive)  
+- Introduced the first dataset for personalized driving behavior modeling, with rule-based and VLM-based annotation fusion.
+- Proposed a benchmark protocol for style-controllable trajectory generation.
+</div></div>
+
 
 # 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2023.09 – 2025.07 (Expected)*, MSc in Artificial Intelligence, University of Manchester  
+  - Focus: Deep Learning, Computer Vision, Reinforcement Learning, Robotics  
+  - Dissertation: Comparative study of Deep Learning and Traditional Vision in Robotic Perception  
+  - Graduated with Distinction (Top 10%)
 
+- *2019.09 – 2023.06*, BEng in Computer Science and Technology, [Your Undergraduate University Name]  
+  - Specialized in software development and machine learning foundations  
+  - Final Year Project: Multi-modal gesture recognition using CNNs and IMU sensors
 
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
