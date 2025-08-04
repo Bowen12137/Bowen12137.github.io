@@ -51,7 +51,7 @@ Currently, I am seeking a PhD position in the UK or globally, where I can **purs
 <div class='paper-box-text' markdown="1">
 
 [**StyleDrive: Driving-Style Aware Benchmarking of End-to-End Autonomous Driving**](https://styledrive.github.io/)  
-**Bowen Jing**, Ruiyang Hao, Haibao Yu, Zaiqing Nie  
+Ruiyang Hao, **Bowen Jing**, Haibao Yu, Zaiqing Nie  
 
 [**Project Page / Code**](https://styledrive.github.io/)  
 - Constructed the first real-world large-scale dataset for driving-style aware E2EAD, with 30k+ annotated scenarios.  
@@ -65,7 +65,7 @@ Currently, I am seeking a PhD position in the UK or globally, where I can **purs
 <div class='paper-box-text' markdown="1">
 
 [**SignBart: Gloss-Free Sign Language Translation for Human-Robot Interaction via Efficient Spatiotemporal Learning**]
-**Bowen Jing**, Hongpeng Wang, Hao Tang, Xiang Li, Fanying Kong
+Hongpeng Wang, **Bowen Jing**, Hao Tang, Xiang Li, Fanying Kong
 
 [**Preprint (Submitted to ICRA 2026)**]  
 - Proposed a gloss-free, end-to-end sign language translation framework tailored for human-robot interaction scenarios.  
@@ -104,8 +104,7 @@ Currently, I am seeking a PhD position in the UK or globally, where I can **purs
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS Submission 2025</div><img src='_pages/images/resolution.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**VDiff-SR: Diffusion with Hierarchical Visual Autoregressive Priors for Image Super-Resolution**](https://anonymous.4open.science/r/VDiff-SR-SR-F32022)  
-**Bowen Jing**
+[**VDiff-SR: Diffusion with Hierarchical Visual Autoregressive Priors for Image Super-Resolution**]
 
 [**Paper**](https://anonymous.4open.science/r/VDiff-SR-SR-F32022)  
 - Proposed a novel hybrid framework combining diffusion models and pretrained Visual AutoRegressive (VAR) priors for real-world image super-resolution (Real-ISR).
