@@ -41,29 +41,36 @@ Currently, I am seeking a PhD position in the UK or globally where I can explore
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Course Project 2024</div><img src='images/project_cv.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Research Project 2025</div><img src='_pages/images.png' alt="styledrive" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**Comparative Analysis of Deep Learning and Traditional Computer Vision in Robotic Vision**](https://drive.google.com/file/d/12L-lZoBxPLFMu5bqIUWveo-UyAP-Q3OF/view?usp=sharing)  
-**Bowen Jing**
+[**StyleDrive: Driving-Style Aware Benchmarking of End-to-End Autonomous Driving**](https://github.com/AIR-THU/StyleDrive)  
+**Bowen Jing**, Ruiyang Hao, Haibao Yu, Zaiqing Nie  
 
-[**Project Report**](https://drive.google.com/file/d/12L-lZoBxPLFMu5bqIUWveo-UyAP-Q3OF/view?usp=sharing)  
-- Achieved 85%, analyzed robustness and generalization of ResNet, ViT, and BoVW under different noise levels.
-- Contributed experimental datasets and comparative benchmarks.
+[**Project Page / Code**](https://github.com/AIR-THU/StyleDrive)  
+- Constructed the first real-world large-scale dataset for driving-style aware E2EAD, with 30k+ annotated scenarios.  
+- Proposed a hybrid annotation framework combining motion heuristics and VLM-based reasoning.  
+- Designed SM-PDMS metric and benchmarked multiple E2E models (e.g., DiffusionDrive, TransFuser) with style conditioning.  
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Course Project 2024</div><img src='images/project_nlp.png' alt="sym" width="100%"></div></div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Research Project 2025</div><img src='_pages/images/translation.png' alt="signbart" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**Sentence-Level Relation Extraction with Transformer-based and GCN Models**](https://drive.google.com/file/d/1-8UGvDrBVcWMseC0Id7IasmWdYwvWMUk/view?usp=sharing)  
-**Bowen Jing**
+[**SignBart: Gloss-Free Sign Language Translation for Human-Robot Interaction via Efficient Spatiotemporal Learning**]
+**Bowen Jing**, Hongpeng Wang, Hao Tang, Xiang Li, Fanying Kong
 
-[**Project Report**](https://drive.google.com/file/d/1-8UGvDrBVcWMseC0Id7IasmWdYwvWMUk/view?usp=sharing)  
-- Reached 92.75%, top 5 in class. Benchmarked PA-LSTM, C-GCN, BERT/RoBERTa on TACRED, TACREV, and Re-TACRED.
-- Designed custom entity marker and contributed few-shot + length-variant splits for robustness testing.
+[**Preprint (Submitted to ICRA 2026)**]  
+- Proposed a gloss-free, end-to-end sign language translation framework tailored for human-robot interaction scenarios.  
+- Designed a lightweight visual encoder **CSIFE-ConvNeXt**, leveraging channel-separated large kernel convolutions to reduce 58% parameters while preserving spatiotemporal expressiveness.  
+- Introduced **TTT-mBART**, a test-time training enhanced decoder that enables dynamic domain adaptation and low-complexity semantic modeling during inference.  
+- Outperformed prior gloss-free methods (GFSLT, SignBERT+) on PHOENIX-2014T and CSL-Daily datasets in BLEU-4 and ROUGE scores, with stronger long-form translation capabilities.  
+- Demonstrated practical deployability for assistive and service robots under low-resource and variable-environment settings.
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Course Project 2024</div><img src='images/project_e2e.png' alt="sym" width="100%"></div></div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Course Project 2024</div><img src='_pages/images/e2e.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**End-to-End Autonomous Driving System with Middle Fusion and Attention**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
@@ -74,15 +81,17 @@ Currently, I am seeking a PhD position in the UK or globally where I can explore
 - Deployed in CARLA and validated via extensive ablation studies.
 </div></div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Benchmark Paper 2025</div><img src='images/styledrive.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS Submission 2025</div><img src='_pages/images/resolution.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**StyleDrive: Towards Driving-Style Aware Benchmarking of End-to-End Autonomous Driving**](https://arxiv.org/abs/2506.23982)  
-**Bowen Jing**, Ruiyang Hao, Haibao Yu, Zaiqing Nie
+[**VDiff-SR: Diffusion with Hierarchical Visual Autoregressive Priors for Image Super-Resolution**](https://anonymous.4open.science/r/VDiff-SR-SR-F32022)  
+**Bowen Jing**
 
-[**arXiv**](https://arxiv.org/abs/2506.23982) • [**GitHub**](https://github.com/style-drive/StyleDrive)  
-- Introduced the first dataset for personalized driving behavior modeling, with rule-based and VLM-based annotation fusion.
-- Proposed a benchmark protocol for style-controllable trajectory generation.
+[**Paper**](https://anonymous.4open.science/r/VDiff-SR-SR-F32022)  
+- Proposed a novel hybrid framework combining diffusion models and pretrained Visual AutoRegressive (VAR) priors for real-world image super-resolution (Real-ISR).
+- Designed two new modules: Condition-Gated Unit (CoGU) for feature conditioning, and Cross-Scale Prior-Aligned Attention (CSPA) for multi-scale structural alignment.
+- Achieved SOTA performance on RealSR and RealSet5 with significant improvements in perceptual metrics (CLIP-IQ ↑, MUSIQ ↑).
+- Conducted detailed ablation demonstrating the synergy of VAR priors and denoising-based generation.
 </div></div>
 
 
