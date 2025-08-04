@@ -65,6 +65,7 @@ Ruiyang Hao, **Bowen Jing**, Haibao Yu, Zaiqing Nie
 <div class='paper-box-text' markdown="1">
 
 [**SignBart: Gloss-Free Sign Language Translation for Human-Robot Interaction via Efficient Spatiotemporal Learning**]
+
 Hongpeng Wang, **Bowen Jing**, Hao Tang, Xiang Li, Fanying Kong
 
 [**Preprint (Submitted to ICRA 2026)**]  
@@ -105,8 +106,7 @@ Hongpeng Wang, **Bowen Jing**, Hao Tang, Xiang Li, Fanying Kong
 <div class='paper-box-text' markdown="1">
 
 [**VDiff-SR: Diffusion with Hierarchical Visual Autoregressive Priors for Image Super-Resolution**]
-
-[**Paper**](https://anonymous.4open.science/r/VDiff-SR-SR-F32022)  
+ 
 - Proposed a novel hybrid framework combining diffusion models and pretrained Visual AutoRegressive (VAR) priors for real-world image super-resolution (Real-ISR).
 - Designed two new modules: Condition-Gated Unit (CoGU) for feature conditioning, and Cross-Scale Prior-Aligned Attention (CSPA) for multi-scale structural alignment.
 - Achieved SOTA performance on RealSR and RealSet5 with significant improvements in perceptual metrics (CLIP-IQ ↑, MUSIQ ↑).
