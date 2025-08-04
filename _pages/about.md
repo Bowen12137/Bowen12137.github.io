@@ -115,12 +115,12 @@ Hongpeng Wang, **Bowen Jing**, Hao Tang, Xiang Li, Fanying Kong
 
 
 # 📖 Educations
-- *2023.09 – 2025.07 (Expected)*, MSc in Artificial Intelligence, University of Manchester  
+- *2023.09 – 2025.07*, MSc in Artificial Intelligence, University of Manchester  
   - Focus: Deep Learning, Computer Vision, Reinforcement Learning, Robotics  
   - Dissertation: Comparative study of Deep Learning and Traditional Vision in Robotic Perception  
   - Graduated with Distinction (Top 10%)
 
-- *2019.09 – 2023.06*, BEng in Computer Science and Technology, [Your Undergraduate University Name]  
+- *2020.09 – 2023.06*, BSc in Computer Science, University of Manchester  
   - Specialized in software development and machine learning foundations  
-  - Final Year Project: Multi-modal gesture recognition using CNNs and IMU sensors
+  - Final Year Project: Spiking Neural Network
 
