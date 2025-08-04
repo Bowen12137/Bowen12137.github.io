@@ -17,16 +17,22 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a Master’s graduate in Artificial Intelligence from the University of Manchester, with a deep passion for building intelligent systems that learn, perceive, and act in the real world. My research bridges **deep learning**, **generative modeling**, and **autonomous systems**, with a focus on enabling robust, interpretable, and generalizable AI agents.
+I am a Master’s graduate in Artificial Intelligence from the University of Manchester, with a strong commitment to developing intelligent systems that can perceive, reason, and act autonomously in complex environments. My research lies at the intersection of **deep learning**, **generative modeling**, and **autonomous systems**, with a central focus on building robust, interpretable, and adaptable AI agents.
 
-My long-term goal is to develop autonomous agents capable of *accurate perception*, *goal-directed decision making*, and *continual learning* in complex, uncertain environments. In particular, I am fascinated by **diffusion models**, **vision-language systems**, and **embodied intelligence**. I believe these are key ingredients for the next generation of interactive AI systems.
+I am especially passionate about **Diffusion Models** and their transformative potential in structured generation tasks—ranging from video synthesis to goal-conditioned planning. I view diffusion as a foundational paradigm for next-generation AI systems due to its probabilistic grounding, high-fidelity outputs, and versatility across modalities.
+
+My long-term research goal is to advance **autonomous agents** capable of *accurate perception*, *goal-driven decision making*, and *continual learning* in uncertain, real-world environments. I am particularly drawn to topics such as:
+- **Diffusion-based generative modeling** for video and behavior generation;
+- **Vision-language systems** for grounded reasoning;
+- **Embodied intelligence** that integrates learning, control, and interaction.
 
 I have hands-on experience in:
-- End-to-end autonomous driving and personalized trajectory generation;
+- End-to-end autonomous driving and personalized trajectory modeling;
 - Multimodal learning (vision, language, control);
-- Video generation, GNNs, reinforcement learning, and real-world dataset curation.
+- Video generation, GNNs, reinforcement learning, and dataset creation at scale.
 
-Currently, I am seeking a PhD position in the UK or globally where I can explore the intersection of **generative models**, **robotics**, and **embodied cognition**.
+Currently, I am seeking a PhD position in the UK or globally, where I can **pursue cutting-edge research on Diffusion Models and their applications in robotics, simulation, and embodied cognition**.
+
 
 > If you're building the future of grounded, generative, and human-aligned AI — let’s connect.
 
@@ -36,18 +42,18 @@ Currently, I am seeking a PhD position in the UK or globally where I can explore
 
 # 🔥 News
 - *2025.07*: &nbsp;🚀 Our paper **"StyleDrive: Towards Driving-Style Aware Benchmarking of End-to-End Autonomous Driving"** is now on arXiv! [Read here](https://arxiv.org/abs/2506.23982)
-- *2025.06*: &nbsp;🎉 I received a Distinction (85%) for my Master's final project on comparative analysis of Deep Learning vs Traditional CV in robotic perception, ranking top 10% in class.
+- *2024.09*: &nbsp;🎉 Graduated from University of Manchester 
 
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Research Project 2025</div><img src='_pages/images.png' alt="styledrive" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Research Project 2025</div><img src='_pages/images/styledrive.png' alt="styledrive" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**StyleDrive: Driving-Style Aware Benchmarking of End-to-End Autonomous Driving**](https://github.com/AIR-THU/StyleDrive)  
+[**StyleDrive: Driving-Style Aware Benchmarking of End-to-End Autonomous Driving**]([https://github.com/AIR-THU/StyleDrive](https://styledrive.github.io/))  
 **Bowen Jing**, Ruiyang Hao, Haibao Yu, Zaiqing Nie  
 
-[**Project Page / Code**](https://github.com/AIR-THU/StyleDrive)  
+[**Project Page / Code**]([https://github.com/AIR-THU/StyleDrive](https://styledrive.github.io/))  
 - Constructed the first real-world large-scale dataset for driving-style aware E2EAD, with 30k+ annotated scenarios.  
 - Proposed a hybrid annotation framework combining motion heuristics and VLM-based reasoning.  
 - Designed SM-PDMS metric and benchmarked multiple E2E models (e.g., DiffusionDrive, TransFuser) with style conditioning.  
@@ -67,6 +73,19 @@ Currently, I am seeking a PhD position in the UK or globally where I can explore
 - Outperformed prior gloss-free methods (GFSLT, SignBERT+) on PHOENIX-2014T and CSL-Daily datasets in BLEU-4 and ROUGE scores, with stronger long-form translation capabilities.  
 - Demonstrated practical deployability for assistive and service robots under low-resource and variable-environment settings.
 </div></div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Research Project 2025</div><img src='_pages/images/minm.png' alt="mim" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**MInM: Mask Instance Modeling for Visual Representation Learning**]
+**Bowen Jing**
+
+[**Preprint (Submitted to AAAI 2026)**]
+- Proposed an instance-aware masked image modeling framework (MInM) that replaces random masking with SAM2-generated semantic masks to guide self-supervised learning.
+- Integrated MInM into the MAE pipeline with zero architectural change, improving convergence speed and semantic alignment.
+- Evaluated on ImageNet-1K, Pascal VOC 2007, MS COCO, and MedMNIST; demonstrated better semantic generalization and downstream transfer.
+</div></div>
+
 
 
 
