@@ -50,14 +50,15 @@ Currently, I am seeking a PhD position in the UK or globally, where I can **purs
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Research Project 2025</div><img src='_pages/images/styledrive.png' alt="styledrive" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**StyleDrive: Driving-Style Aware Benchmarking of End-to-End Autonomous Driving**]([https://github.com/AIR-THU/StyleDrive](https://styledrive.github.io/))  
+[**StyleDrive: Driving-Style Aware Benchmarking of End-to-End Autonomous Driving**](https://styledrive.github.io/)  
 **Bowen Jing**, Ruiyang Hao, Haibao Yu, Zaiqing Nie  
 
-[**Project Page / Code**]([https://github.com/AIR-THU/StyleDrive](https://styledrive.github.io/))  
+[**Project Page / Code**](https://styledrive.github.io/)  
 - Constructed the first real-world large-scale dataset for driving-style aware E2EAD, with 30k+ annotated scenarios.  
 - Proposed a hybrid annotation framework combining motion heuristics and VLM-based reasoning.  
 - Designed SM-PDMS metric and benchmarked multiple E2E models (e.g., DiffusionDrive, TransFuser) with style conditioning.  
 </div></div>
+
 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Research Project 2025</div><img src='_pages/images/translation.png' alt="signbart" width="100%"></div></div>
