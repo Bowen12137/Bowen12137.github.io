@@ -94,17 +94,6 @@ Hongpeng Wang, **Bowen Jing**, Hao Tang, Xiang Li, Fanying Kong
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Course Project 2024</div><img src='_pages/images/e2e.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**End-to-End Autonomous Driving System with Middle Fusion and Attention**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
-**Bowen Jing**
-
-[**Project Report**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
-- Built a multimodal AV system integrating LiDAR and RGB via channel-attentive fusion.
-- Deployed in CARLA and validated via extensive ablation studies.
-</div></div>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS Submission 2025</div><img src='_pages/images/resolution.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
 [**VDiff-SR: Diffusion with Hierarchical Visual Autoregressive Priors for Image Super-Resolution**]
  
 - Proposed a novel hybrid framework combining diffusion models and pretrained Visual AutoRegressive (VAR) priors for real-world image super-resolution (Real-ISR).
@@ -124,3 +113,13 @@ Hongpeng Wang, **Bowen Jing**, Hao Tang, Xiang Li, Fanying Kong
   - Specialized in software development and machine learning foundations  
   - Final Year Project: Spiking Neural Network
 
+[**End-to-End Autonomous Driving System with Middle Fusion and Attention**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
+**Bowen Jing**
+
+[**Project Report**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
+- Built a multimodal AV system integrating LiDAR and RGB via channel-attentive fusion.
+- Deployed in CARLA and validated via extensive ablation studies.
+</div></div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">NeurIPS Submission 2025</div><img src='_pages/images/resolution.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
