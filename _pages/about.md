@@ -27,22 +27,13 @@ redirect_from:
 
 I am particularly drawn to topics such as:
 
-* 🌀 **Diffusion-based generative modeling** for video and behavior generation
-* 🧩 **Vision-Language-Action systems** for grounded reasoning
-* 🦾 **Embodied intelligence** integrating learning, control, and interaction# 💻 Internships and Research Positions
-- *2025.08 – Present* · **Tuojing Intelligence** — Research Intern in **Traffic Simulation and Generative Modeling**  
-- *2025.02 – 2025.08* · **Tsinghua University, AIR** — Research Intern in **Large-Scale Autonomous Driving Data Mining**
-
-
-🧠 I have hands-on experience in:
-
+* 🌀 **Diffusion-based generative AI** for video and behavior generation
 * 🚗 **End-to-end autonomous driving** and **personalized trajectory modeling**
 * 🎛️ **Multimodal learning** (vision, language, control)
-* 🎬 **Video generation**, **GNNs**, **reinforcement learning**, and **large-scale dataset creation**
 
-🌐 Currently, I am seeking a **PhD position** in the UK or globally, where I can pursue **cutting-edge research on Diffusion Models** and their applications in **robotics**, **simulation**, and **embodied cognition**.
+🌐 Currently, I am seeking a **PhD position** in the UK or globally, where I can pursue **cutting-edge research on Diffusion Models** and their applications in **robotics**, and **autonomous driving**.
 
-> If you're building the future of grounded, generative, and human-aligned AI — let’s connect.
+> If you're building the future of grounded, interpretable, and trustworthy AI — let’s connect.
 
 [Google Scholar](https://scholar.google.com/) • [GitHub](https://github.com/) • [LinkedIn](https://linkedin.com/)
 
