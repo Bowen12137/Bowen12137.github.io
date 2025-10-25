@@ -133,7 +133,7 @@ Hongpeng Wang, **Bowen Jing**, Hao Tang, Xiang Li, Fanying Kong
   - Specialized in software development and machine learning foundations  
   - Final Year Project: Spiking Neural Network
 
-# 💻 Internships and Research Positions
+# 💻 Internships
 - *2025.08 – Present* · **Tuojing Intelligence** — Research Intern in **Traffic Simulation and Generative Modeling**  
 - *2025.02 – 2025.08* · **Tsinghua University, AIR** — Research Intern in **Large-Scale Autonomous Driving Data Mining**
 
