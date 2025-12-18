@@ -40,6 +40,7 @@ I am particularly drawn to topics such as:
 
 
 # 🔥 News
+- *2025.11*: &nbsp;🏆 Our work **StyleDrive** has been **accepted as an Oral presentation at AAAI 2026**.
 - *2025.10*: &nbsp;🏆 Our work **StyleDrive** received an **average score of 7** in the **AAAI 2026** review process!  
 - *2025.08*: &nbsp;🤖 Joined **Tuojing Intelligence** as a **Researcher**, focusing on diffusion-based scenario generation and embodied AI.  
 - *2025.02*: &nbsp;🎓 Joined **Tsinghua AIR (Institute for AI Industry Research)** as a **Research Assistant**, working on generative modeling for autonomous driving.  
@@ -51,7 +52,7 @@ I am particularly drawn to topics such as:
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026</div><img src='_pages/images/styledrive.png' alt="styledrive" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI 2026 Oral</div><img src='_pages/images/styledrive.png' alt="styledrive" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**StyleDrive: Driving-Style Aware Benchmarking of End-to-End Autonomous Driving**](https://styledrive.github.io/)  
