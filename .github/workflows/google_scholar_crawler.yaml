@@ -1,4 +1,4 @@
-name: Get Citation Data   # 工作流名称，可自行调整
+name: Update Google Scholar Citations
 
 ###############################################################################
 # 触发方式：
@@ -6,6 +6,12 @@ name: Get Citation Data   # 工作流名称，可自行调整
 #   • schedule              👉 每周 UTC 8:00（北京时间 16:00）自动运行一次
 ###############################################################################
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - google_scholar_crawler/**
+      - .github/workflows/google_scholar_crawler.yaml
   workflow_dispatch:
   schedule:
     # ┌───────── 分 (0-59)
@@ -17,26 +23,28 @@ on:
     - cron: '0 8 * * 0'   # 👉 每周日 08:00 UTC 触发（即北京时间周日 16:00）
 
 ###############################################################################
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
     # 1) Checkout 代码（不保留 GitHub 默认只读 token）
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         persist-credentials: false
 
     # 2) 安装 Python & 依赖
     - name: Setup Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.9'
+        python-version: '3.11'
 
     - name: Install dependencies
       run: |
-        sudo apt-get update -y
-        sudo apt-get install -y python3-setuptools
+        python -m pip install --upgrade pip setuptools wheel
         pip3 install -r google_scholar_crawler/requirements.txt
 
     # 3) 运行爬虫脚本，生成 JSON 数据到 google_scholar_crawler/results
