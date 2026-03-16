@@ -17,25 +17,62 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-🎓 I am a **Master’s graduate in Artificial Intelligence** from *The University of Manchester*, with a strong commitment to developing intelligent systems that can **perceive, reason, and act autonomously** in complex environments.
+## Research Identity
 
-🤖 My research lies at the intersection of **deep learning**, **generative modeling**, and **autonomous systems**, with a central focus on building **robust**, **interpretable**, and **adaptable AI agents**.
+**Bowen Jing (荆博闻)** is a researcher in **Generative AI and Embodied Intelligence**.
 
-💨 I am especially passionate about **Diffusion Models** and their transformative potential in structured generation tasks — ranging from **video synthesis 🎥** to **goal-conditioned planning 🧭**. I view diffusion as a foundational paradigm for next-generation AI systems due to its **probabilistic grounding**, **high-fidelity outputs**, and **cross-modal versatility**.
+My research focuses on **generative world models** for embodied agents. I study how **diffusion-based generative models** can model and simulate complex interactive environments, enabling intelligent agents to reason, predict, and act in the physical world.
 
-🌍 My long-term research goal is to advance **autonomous agents** capable of *accurate perception 👁️*, *goal-driven decision making 🎯*, and *continual learning 🔁* in uncertain, real-world environments.
+My work lies at the intersection of:
 
-I am particularly drawn to topics such as:
+- **Generative Models**: diffusion, video generation, and structured generative modeling
+- **World Models**: learning environment dynamics, future prediction, and simulation
+- **Embodied Intelligence**: agents that perceive, reason, and plan through interaction
+- **Autonomous Driving and Robotics**: real-world applications for decision-making systems
 
-* 🌀 **Diffusion-based generative AI** for video and behavior generation
-* 🚗 **End-to-end autonomous driving** and **personalized trajectory modeling**
-* 🎛️ **Multimodal learning** (vision, language, control)
+My long-term goal is to develop **AI systems that understand and interact with the real world**, moving beyond perception toward **intelligence grounded in physical environments**.
 
-🌐 Currently, I am seeking a **PhD position** in the UK or globally, where I can pursue **cutting-edge research on Diffusion Models** and their applications in **robotics**, and **autonomous driving**.
+Currently, I am seeking a **PhD opportunity** to work on **generative world models, embodied intelligence, and diffusion-based simulation** for robotics and autonomous systems.
 
-> If you're building the future of grounded, interpretable, and trustworthy AI — let’s connect.
+[Google Scholar](https://scholar.google.com/citations?user=7ICz8uAAAAAJ) • [GitHub](https://github.com/Bowen12137) • [LinkedIn](https://www.linkedin.com/in/bowenjing/)
 
-[Google Scholar](https://scholar.google.com/) • [GitHub](https://github.com/) • [LinkedIn](https://linkedin.com/)
+## Research Theme
+
+**Generative AI -> World Models -> Embodied Intelligence**
+
+My central research question is:
+
+> How can generative models learn the dynamics of the real world and support intelligent decision-making for embodied agents?
+
+I am particularly interested in three directions:
+
+1. **Generative World Models**
+
+   Using diffusion and generative models to capture complex environment dynamics for scene generation, future prediction, interaction modeling, and simulation.
+
+2. **Counterfactual Reasoning**
+
+   Building models that can answer questions such as *what would happen if an agent behaved differently?* This is important for safety evaluation, decision analysis, and scenario reasoning.
+
+3. **Embodied Intelligence**
+
+   Applying generative world models to **autonomous driving**, **robotics**, and **interactive agents**, with the goal of enabling long-horizon planning in real-world environments.
+
+## Research Philosophy
+
+My research is guided by **first-principles thinking**. I am interested in foundational questions such as:
+
+- What is an environment?
+- What is intelligence?
+- What is decision-making?
+
+By combining ideas from **cognitive science**, **generative modeling**, and **causal reasoning**, I aim to study how AI systems can form internal models of the world and use them to support prediction, interaction, and planning.
+
+## Long-term Vision
+
+> To build AI systems that can model, understand, and interact with the real world, enabling the emergence of general intelligence grounded in physical environments.
+
+This vision goes beyond perception, image generation, or language reasoning alone. The goal is to build systems that can **predict the future**, **reason about causality**, **interact with environments**, and **make decisions under real-world dynamics**.
 
 
 
@@ -137,6 +174,5 @@ Hongpeng Wang, **Bowen Jing**, Hao Tang, Xiang Li, Fanying Kong
 # 💻 Internships
 - *2025.08 – Present* · **Tuojing Intelligence** — Research Intern in **Traffic Simulation and Generative Modeling**  
 - *2025.02 – 2025.08* · **Tsinghua University, AIR** — Research Intern in **Large-Scale Autonomous Driving Data Mining**
-
 
 
