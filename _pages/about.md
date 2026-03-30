@@ -106,13 +106,47 @@ Ruiyang Hao, **Bowen Jing**, Haibao Yu, Zaiqing Nie
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Under Review</div><img src='_pages/images/translation.png' alt="signbart" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='_pages/images/counterscene.jpg' alt="counterscene" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**CounterScene: Counterfactual Causal Reasoning in Generative World Models for Safety-Critical Closed-Loop Evaluation**](https://arxiv.org/pdf/2603.21104)  
+**Bowen Jing**, Ruiyang Hao, Weitao Zhou, Haibao Yu  
+
+[**arXiv PDF**](https://arxiv.org/pdf/2603.21104)  
+- Introduced a safety-critical generative world model with **counterfactual causal reasoning** for closed-loop autonomous driving evaluation.  
+- Built a **Causal Interaction Graph (CIG)** to identify conflict-aware agent relationships and guide adversarial agent selection.  
+- Designed a **dynamic counterfactual guidance** strategy to optimize challenging yet realistic multi-agent trajectories during denoising.  
+- Demonstrated stronger collision-inducing capability and robust transfer from **Waymo Open Motion** to **nuPlan**.  
+
+</div></div>
+
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='_pages/images/recondrive.png' alt="recondrive" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**ReconDrive: Feed-Forward 4D Gaussian Scene Reconstruction for Autonomous Driving**](https://arxiv.org/pdf/2603.07552)  
+Haibao Yu, Kuntao Xiao, Jiahang Wang, Ruiyang Hao, Yuxin Huang, Guoran Hu, Haifang Qin, **Bowen Jing**, Yuntian Bo, Ping Luo  
+
+[**arXiv PDF**](https://arxiv.org/pdf/2603.07552)  
+- Proposed a **feed-forward 4D Gaussian scene reconstruction** framework for autonomous driving with fast novel-view synthesis.  
+- Combined **DINO**, **SAM2**, and dual prediction heads to jointly estimate Gaussian parameters and centers from multi-view sequences.  
+- Introduced a **static-dynamic 4D composition** design for temporally consistent scene modeling without per-scene optimization.  
+- Achieved competitive reconstruction quality with substantially higher efficiency on **nuScenes** compared with optimization-based methods.  
+
+</div></div>
+
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM Submission</div><img src='_pages/images/translation.png' alt="signbart" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**SignBart: Gloss-Free Sign Language Translation for Human-Robot Interaction via Efficient Spatiotemporal Learning**]  
 Hongpeng Wang, **Bowen Jing**, Hao Tang, Xiang Li, Fanying Kong  
 
-[**Preprint (Submitted to ICRA 2026)**]  
+[**Preprint (Submitted to ACM MM)**]  
 - 🧏‍♂️ Introduced a **gloss-free, end-to-end sign language translation** framework for human–robot interaction.  
 - ⚙️ Designed a **lightweight visual encoder (CSIFE-ConvNeXt)** achieving 58% parameter reduction.  
 - 🧠 Proposed **TTT-mBART**, enabling **test-time adaptation** and robust domain transfer.  
@@ -123,13 +157,13 @@ Hongpeng Wang, **Bowen Jing**, Hao Tang, Xiang Li, Fanying Kong
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Research Project 2025</div><img src='_pages/images/minm.png' alt="mim" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML Submission</div><img src='_pages/images/minm.png' alt="mim" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**MInM: Mask Instance Modeling for Visual Representation Learning**]
 **Bowen Jing**
 
-[**Preprint (Submitted to AAAI 2026)**]
+[**Preprint (Submitted to ICML)**]
 - Proposed an instance-aware masked image modeling framework (MInM) that replaces random masking with SAM2-generated semantic masks to guide self-supervised learning.
 - Integrated MInM into the MAE pipeline with zero architectural change, improving convergence speed and semantic alignment.
 - Evaluated on ImageNet-1K, Pascal VOC 2007, MS COCO, and MedMNIST; demonstrated better semantic generalization and downstream transfer.
@@ -150,7 +184,7 @@ Hongpeng Wang, **Bowen Jing**, Hao Tang, Xiang Li, Fanying Kong
 </div></div>
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR2026 Submission</div><img src='_pages/images/resolution.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ECCV 2026 Submission</div><img src='_pages/images/resolution.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [**VDiff-SR: Diffusion with Hierarchical Visual Autoregressive Priors for Image Super-Resolution**]
  
@@ -174,5 +208,3 @@ Hongpeng Wang, **Bowen Jing**, Hao Tang, Xiang Li, Fanying Kong
 # 💻 Internships
 - *2025.08 – Present* · **Tuojing Intelligence** — Research Intern in **Traffic Simulation and Generative Modeling**  
 - *2025.02 – 2025.08* · **Tsinghua University, AIR** — Research Intern in **Large-Scale Autonomous Driving Data Mining**
-
-
