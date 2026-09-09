@@ -156,6 +156,6 @@ Ruiyang Hao, **Bowen Jing**, Haibao Yu, Zaiqing Nie
   - Specialized in software development and machine learning foundations  
   - Final Year Project: Spiking Neural Network
 
-# 💻 Internships
-- *2025.08 – Present* · **Tuojing Intelligence** — Research Intern in **Traffic Simulation and Generative Modeling**  
+# 💻 Experience
+- *2025.08 – Present* · **Tuojing Intelligence** — **Tech Lead**, Real2Sim2Real and tactile simulation  
 - *2025.02 – 2025.08* · **Tsinghua University, AIR** — Research Intern in **Large-Scale Autonomous Driving Data Mining**
