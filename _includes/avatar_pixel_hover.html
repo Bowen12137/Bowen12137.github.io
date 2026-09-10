@@ -1,0 +1,157 @@
+<script>
+  // Hover the sidebar avatar: it pixelates up into chunky blocks, swaps to the
+  // alternate portrait at peak blockiness, then resolves back to full detail.
+  // Driven by author.avatar_hover in _config.yml; no-ops if that image is absent.
+  (function () {
+    var wrap = document.querySelector('.author__avatar');
+    if (!wrap) return;
+    var img = wrap.querySelector('img');
+    if (!img) return;
+    var hoverSrc = img.getAttribute('data-hover-src');
+    if (!hoverSrc || !window.requestAnimationFrame) return;
+
+    var MAX_BLOCK = 26;   // pixel size at the blockiest point of the transition
+    var OUT_MS = 300;     // detail -> blocks
+    var IN_MS = 420;      // blocks -> detail
+    var reduce = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var hoverImg = new Image();
+    var ready = false;
+    hoverImg.onload = function () { ready = true; };
+    hoverImg.src = hoverSrc;
+
+    var canvas = document.createElement('canvas');
+    canvas.className = 'author__avatar-fx';
+    canvas.setAttribute('aria-hidden', 'true');
+    var ctx = canvas.getContext('2d');
+    wrap.appendChild(canvas);
+    wrap.classList.add('has-avatar-fx');
+
+    var raf = null;
+    var on = false;
+
+    // Lay the canvas exactly over the avatar's content box, so the existing
+    // padding and border ring stay visible around it.
+    function place() {
+      var wr = wrap.getBoundingClientRect();
+      var ir = img.getBoundingClientRect();
+      var cs = window.getComputedStyle(img);
+      var pl = parseFloat(cs.paddingLeft) || 0;
+      var pt = parseFloat(cs.paddingTop) || 0;
+      var pr = parseFloat(cs.paddingRight) || 0;
+      var pb = parseFloat(cs.paddingBottom) || 0;
+      var bl = parseFloat(cs.borderLeftWidth) || 0;
+      var bt = parseFloat(cs.borderTopWidth) || 0;
+      var br = parseFloat(cs.borderRightWidth) || 0;
+      var bb = parseFloat(cs.borderBottomWidth) || 0;
+      var w = ir.width - pl - pr - bl - br;
+      var h = ir.height - pt - pb - bt - bb;
+      if (w <= 0 || h <= 0) return false;
+
+      canvas.style.left = (ir.left - wr.left + bl + pl) + 'px';
+      canvas.style.top = (ir.top - wr.top + bt + pt) + 'px';
+      canvas.style.width = w + 'px';
+      canvas.style.height = h + 'px';
+
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
+      return true;
+    }
+
+    // Draw `source` cover-cropped into a small buffer, then blow that buffer
+    // back up with smoothing off — which is what produces the blocks.
+    function draw(source, block) {
+      var W = canvas.width, H = canvas.height;
+      if (!W || !H) return;
+      var sw = Math.max(1, Math.round(W / block));
+      var sh = Math.max(1, Math.round(H / block));
+      var iw = source.naturalWidth || source.width;
+      var ih = source.naturalHeight || source.height;
+      if (!iw || !ih) return;
+
+      var scale = Math.max(sw / iw, sh / ih);
+      var dw = iw * scale, dh = ih * scale;
+
+      ctx.imageSmoothingEnabled = true;
+      ctx.clearRect(0, 0, W, H);
+      ctx.drawImage(source, (sw - dw) / 2, (sh - dh) / 2, dw, dh);
+      ctx.imageSmoothingEnabled = false;
+      ctx.drawImage(canvas, 0, 0, sw, sh, 0, 0, W, H);
+    }
+
+    function ease(p) {
+      return p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+    }
+
+    function stop() {
+      if (raf) { window.cancelAnimationFrame(raf); raf = null; }
+    }
+
+    function animate(dur, frame, done) {
+      stop();
+      var t0 = window.performance ? performance.now() : Date.now();
+      // Paint frame zero synchronously: a backgrounded tab pauses rAF, and the
+      // canvas must never be left blank on top of the avatar.
+      frame(0);
+      raf = window.requestAnimationFrame(function step(now) {
+        var p = Math.min(1, (now - t0) / dur);
+        frame(p);
+        if (p < 1) raf = window.requestAnimationFrame(step);
+        else { raf = null; if (done) done(); }
+      });
+    }
+
+    function usable() {
+      return ready && img.complete && place();
+    }
+
+    function show(source) {
+      canvas.classList.add('is-on');
+      draw(source, 1);
+    }
+
+    function toHover() {
+      if (on || !usable()) return;
+      on = true;
+      if (reduce) { show(hoverImg); return; }
+      canvas.classList.add('is-on');
+      animate(OUT_MS, function (p) {
+        draw(img, 1 + (MAX_BLOCK - 1) * ease(p));
+      }, function () {
+        animate(IN_MS, function (p) {
+          draw(hoverImg, MAX_BLOCK - (MAX_BLOCK - 1) * ease(p));
+        });
+      });
+    }
+
+    function toBase() {
+      if (!on) return;
+      on = false;
+      if (!usable()) { stop(); canvas.classList.remove('is-on'); return; }
+      if (reduce) { canvas.classList.remove('is-on'); return; }
+      animate(OUT_MS, function (p) {
+        draw(hoverImg, 1 + (MAX_BLOCK - 1) * ease(p));
+      }, function () {
+        animate(IN_MS, function (p) {
+          draw(img, MAX_BLOCK - (MAX_BLOCK - 1) * ease(p));
+        }, function () {
+          canvas.classList.remove('is-on');
+        });
+      });
+    }
+
+    wrap.addEventListener('mouseenter', toHover);
+    wrap.addEventListener('mouseleave', toBase);
+    // Touch screens have no hover, so let a tap flip it.
+    wrap.addEventListener('click', function () {
+      if (on) { toBase(); } else { toHover(); }
+    });
+
+    window.addEventListener('resize', function () {
+      if (!on) return;
+      if (place()) draw(hoverImg, 1);
+    });
+  })();
+</script>
