@@ -19,17 +19,17 @@ redirect_from:
 
 ## About
 
-**Bowen Jing (荆博闻)** works on **Physical AI** and **Safe AI**: embodied agents that act in the physical world, and the world models and evaluation needed before we can trust them there.
+**Bowen Jing (荆博闻)** works on **Physical AI**: robots that pursue goals, learn from accumulated experience, and adapt to conditions they were never trained on — safely enough to work around people.
 
 <a href='https://scholar.google.com/citations?user=7ICz8uAAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&labelColor=f6f6f6&color=9cf&style=flat&label=citations&cacheSeconds=3600"></a>
 
-My question is **what an embodied agent must understand about physical dynamics before it can be trusted to act around people — and how we would know whether it does.** I build world models that capture how environments respond to contact, policies that hold up under conditions they were not trained on, and evaluation that measures harm rather than task success alone.
+My work spans **end-to-end autonomous driving** and **robotic manipulation**, held together by one question: **what must an embodied agent learn from data before its behavior holds up outside the conditions that data covered?** I work on how a model represents the diversity of behavior inside the data it saw, how generative methods build experience beyond that coverage, and how evaluation exposes the limits that task success hides.
 
+- **World Models**: connecting observations and actions to their consequences, as a substrate for both learning and evaluation
 - **Physical AI**: contact-rich manipulation, visuo-tactile perception, deformable-object interaction
-- **World Models**: environment dynamics and generative simulation faithful enough to serve as a testbed for decision-making
-- **Safe AI**: counterfactual scenario generation, robustness under distribution shift, and evaluation that surfaces failure before deployment
+- **Safe AI**: counterfactual scenario generation, robustness under distribution shift, evaluation that surfaces failure before deployment
 
-This began in **autonomous driving**, where safety-critical evaluation is unavoidable. I now carry the same tools into **robot manipulation and household environments**, where failure is tangible and the object being handled can be damaged.
+Bridging simulation and reality runs both ways. Real2Sim has to preserve the properties that actually decide an interaction; on the robot side, embodiment, actuation and control decide whether a learned behavior survives the transfer at all — approach velocity and direction, hand preshaping and timing, contact location and sequence, and the forces, deformation and slip that follow. **Reproducing a trajectory is only one part of reproducing an interaction.**
 
 > Long term: bring robots out of the laboratory and into ordinary homes and human society — capable enough to be useful, and safe enough to be trusted.
 
@@ -41,6 +41,7 @@ Currently seeking a **PhD** in physical AI, world models, and AI safety for embo
 
 # 🔥 News
 - *2026.09*: &nbsp;🏆 Early versions of **SoftVTBench** and **CounterScene** were accepted as **Orals** at the **Safe World Models for Trustworthy Embodied AI** workshop, [ECCV 2026](https://trustworthy-world-models.github.io/ECCV2026/).  
+- *2026.08*: &nbsp;🪨 Our paper **"KnockGS: Interaction-Grounded Calibration of Physical Gaussian Representations"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2608.27365) · [Code](https://github.com/TuojingAI/KnockGS)  
 - *2026.07*: &nbsp;🤖 Our paper **"ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2607.28993)  
 - *2026.07*: &nbsp;🧈 Released **SoftVTBench**, a deformation-aware visuo-tactile dataset and benchmark for deformable-object manipulation. [arXiv](https://arxiv.org/abs/2607.04234) · [Project Page](https://softvtbench.github.io/)  
 - *2026.03*: &nbsp;🌍 Our paper **"CounterScene: Counterfactual Causal Reasoning in Generative World Models for Safety-Critical Closed-Loop Evaluation"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2603.21104)  
@@ -51,17 +52,20 @@ Currently seeking a **PhD** in physical AI, world models, and AI safety for embo
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='_pages/images/stwam.png' alt="stwam" width="100%"></div></div>
+<sub>\* Equal contribution. Ordered by my role in the work rather than by date.</sub>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge badge--gold-sheen">ECCV 2026 Workshop Oral</div><img src='_pages/images/counterscene.jpg' alt="counterscene" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts**](https://arxiv.org/abs/2607.28993)  
-Mingxin Wang, Bin Hu, Bin Qian, Kaitao Jiang, Haoning Wu, Feng Yan, **Bowen Jing**, Ruiyang Hao, Enyi Wang, Kangning Niu, Yandan Yang, Mu Xu, Yan Wang, Houde Liu, Tianlun Li  
+[**CounterScene: Counterfactual Causal Reasoning in Generative World Models for Safety-Critical Closed-Loop Evaluation**](https://arxiv.org/abs/2603.21104)  
+**Bowen Jing**, Ruiyang Hao, Weitao Zhou, Haibao Yu  
 
-[**arXiv**](https://arxiv.org/abs/2607.28993)  
-- Identified **Training-Distribution Hallucination**: pixel-generative future supervision hallucinates training-domain content instead of staying faithful to a visually shifted scene.
-- Showed via a controlled frame-triplet diagnosis that **DINOv3 features stay more stable across visual shifts** than Wan-VAE latents while better preserving task-state distinctions.
-- Proposed **Dual-Space Future Experts (DSFE)** and **Current-Anchored Intent Retrieval (CAIR)**, trained end-to-end with **no explicit future generation at inference**.
-- Reached **98.7% on LIBERO** and **92.8% on RoboTwin 2.0**; improved zero-shot LIBERO-Plus by **21.3 points** over Fast-WAM and lifted real-world success under visual shift from **25.8% to 61.5%**.
+[**Project Page**](https://tuojingai.github.io/?p=counterscene) • [**arXiv**](https://arxiv.org/abs/2603.21104) • [**ECCV 2026 Workshop (Oral)**](https://trustworthy-world-models.github.io/ECCV2026/)  
+- An early version was accepted as an **Oral** at the **Safe World Models for Trustworthy Embodied AI** workshop, ECCV 2026.
+- Introduced a safety-critical generative world model with **counterfactual causal reasoning** for closed-loop autonomous driving evaluation.  
+- Built a **Causal Interaction Graph (CIG)** to identify conflict-aware agent relationships and guide adversarial agent selection.  
+- Designed a **dynamic counterfactual guidance** strategy to optimize challenging yet realistic multi-agent trajectories during denoising.  
+- Demonstrated stronger collision-inducing capability and robust transfer from **Waymo Open Motion** to **nuPlan**.  
 
 </div></div>
 
@@ -84,18 +88,49 @@ Mingxin Wang, Bin Hu, Bin Qian, Kaitao Jiang, Haoning Wu, Feng Yan, **Bowen Jing
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge badge--gold-sheen">ECCV 2026 Workshop Oral</div><img src='_pages/images/counterscene.jpg' alt="counterscene" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge badge--gold-sheen">AAAI 2026 Oral</div><img src='_pages/images/styledrive.png' alt="styledrive" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**CounterScene: Counterfactual Causal Reasoning in Generative World Models for Safety-Critical Closed-Loop Evaluation**](https://arxiv.org/abs/2603.21104)  
-**Bowen Jing**, Ruiyang Hao, Weitao Zhou, Haibao Yu  
+[**StyleDrive: Towards Driving-Style Aware Benchmarking of End-To-End Autonomous Driving**](https://styledrive.github.io/)  
+Ruiyang Hao, **Bowen Jing**, Haibao Yu, Zaiqing Nie  
 
-[**Project Page**](https://tuojingai.github.io/?p=counterscene) • [**arXiv**](https://arxiv.org/abs/2603.21104) • [**ECCV 2026 Workshop (Oral)**](https://trustworthy-world-models.github.io/ECCV2026/)  
-- An early version was accepted as an **Oral** at the **Safe World Models for Trustworthy Embodied AI** workshop, ECCV 2026.
-- Introduced a safety-critical generative world model with **counterfactual causal reasoning** for closed-loop autonomous driving evaluation.  
-- Built a **Causal Interaction Graph (CIG)** to identify conflict-aware agent relationships and guide adversarial agent selection.  
-- Designed a **dynamic counterfactual guidance** strategy to optimize challenging yet realistic multi-agent trajectories during denoising.  
-- Demonstrated stronger collision-inducing capability and robust transfer from **Waymo Open Motion** to **nuPlan**.  
+[**Project Page / Code**](https://styledrive.github.io/) • [**arXiv**](https://arxiv.org/abs/2506.23982)  
+- 🚗 Introduced the **first large-scale real-world dataset** for driving-style–aware E2E autonomous driving.  
+- 🧠 Developed a **hybrid annotation pipeline** combining motion heuristics and VLM reasoning.  
+- 📊 Proposed the **SM-PDMS metric** and established the **first benchmark** for personalized E2EAD.  
+- 💡 Achieved **notable improvements in human-like driving** through style conditioning.  
+
+</div></div>
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='_pages/images/knockgs.png' alt="knockgs" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**KnockGS: Interaction-Grounded Calibration of Physical Gaussian Representations**](https://arxiv.org/abs/2608.27365)  
+Chenchen Ge\*, Hanwen Shen\*, **Bowen Jing**, Jiyuan Cai, Xiaofeng Wang, Hongsen Lei, Weitao Zhou, Dandan Zhang, Haibao Yu  
+
+[**Project Page**](https://tuojingai.github.io/?p=knockgs) • [**arXiv**](https://arxiv.org/abs/2608.27365) • [**Code**](https://github.com/TuojingAI/KnockGS)  
+- Estimated the **elasticity and density scales** of a 3D Gaussian object from its dynamics under a known applied force, instead of assuming material parameters are given.
+- Turned the **force-induced response into a calibration signal**: temporal response features are extracted from the observed dynamics and the two material scales are read off them.
+- **Froze the estimate and wrote it back** into the same simulator, so it is tested on an interaction it was never fitted to.
+- Recovered the scales more accurately than regression, global regression, or a fixed default, measured on 3D particle trajectories, response-curve statistics, and rendered-frame quality.
+
+</div></div>
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='_pages/images/stwam.png' alt="stwam" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts**](https://arxiv.org/abs/2607.28993)  
+Mingxin Wang, Bin Hu, Bin Qian, Kaitao Jiang, Haoning Wu, Feng Yan, **Bowen Jing**, Ruiyang Hao, Enyi Wang, Kangning Niu, Yandan Yang, Mu Xu, Yan Wang, Houde Liu, Tianlun Li  
+
+[**arXiv**](https://arxiv.org/abs/2607.28993)  
+- Identified **Training-Distribution Hallucination**: pixel-generative future supervision hallucinates training-domain content instead of staying faithful to a visually shifted scene.
+- Showed via a controlled frame-triplet diagnosis that **DINOv3 features stay more stable across visual shifts** than Wan-VAE latents while better preserving task-state distinctions.
+- Proposed **Dual-Space Future Experts (DSFE)** and **Current-Anchored Intent Retrieval (CAIR)**, trained end-to-end with **no explicit future generation at inference**.
+- Reached **98.7% on LIBERO** and **92.8% on RoboTwin 2.0**; improved zero-shot LIBERO-Plus by **21.3 points** over Fast-WAM and lifted real-world success under visual shift from **25.8% to 61.5%**.
 
 </div></div>
 
@@ -112,22 +147,6 @@ Haibao Yu, Kuntao Xiao, Jiahang Wang, Ruiyang Hao, Yuxin Huang, Guoran Hu, Haifa
 - Combined **DINO**, **SAM2**, and dual prediction heads to jointly estimate Gaussian parameters and centers from multi-view sequences.  
 - Introduced a **static-dynamic 4D composition** design for temporally consistent scene modeling without per-scene optimization.  
 - Achieved competitive reconstruction quality with substantially higher efficiency on **nuScenes** compared with optimization-based methods.  
-
-</div></div>
-
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge badge--gold-sheen">AAAI 2026 Oral</div><img src='_pages/images/styledrive.png' alt="styledrive" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[**StyleDrive: Towards Driving-Style Aware Benchmarking of End-To-End Autonomous Driving**](https://styledrive.github.io/)  
-Ruiyang Hao, **Bowen Jing**, Haibao Yu, Zaiqing Nie  
-
-[**Project Page / Code**](https://styledrive.github.io/) • [**arXiv**](https://arxiv.org/abs/2506.23982)  
-- 🚗 Introduced the **first large-scale real-world dataset** for driving-style–aware E2E autonomous driving.  
-- 🧠 Developed a **hybrid annotation pipeline** combining motion heuristics and VLM reasoning.  
-- 📊 Proposed the **SM-PDMS metric** and established the **first benchmark** for personalized E2EAD.  
-- 💡 Achieved **notable improvements in human-like driving** through style conditioning.  
 
 </div></div>
 
