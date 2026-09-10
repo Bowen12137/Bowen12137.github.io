@@ -50,6 +50,7 @@ function updateNav() {
 
   // Keep counter updated
   $btn.attr("count", breaks.length);
+  $btn.attr("aria-expanded", !$hlinks.hasClass("hidden"));
 
   // Recur if the visible list is still overflowing the nav
   if($vlinks.width() > availableSpace) {
@@ -67,6 +68,22 @@ $(window).resize(function() {
 $btn.on('click', function() {
   $hlinks.toggleClass('hidden');
   $(this).toggleClass('close');
+  $(this).attr("aria-expanded", !$hlinks.hasClass("hidden"));
 });
 
 updateNav();
+
+// Close the overflow menu after navigation or Escape; keep keyboard focus usable.
+(function () {
+  function closeNavigation() {
+    $hlinks.addClass('hidden');
+    $btn.removeClass('close').attr('aria-expanded', 'false');
+  }
+  $nav.on('click', 'a', closeNavigation);
+  $nav.on('keydown', function (event) {
+    if (event.key === 'Escape' && !$hlinks.hasClass('hidden')) {
+      closeNavigation();
+      $btn.focus();
+    }
+  });
+})();

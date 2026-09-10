@@ -3,7 +3,7 @@
   // alternate portrait at peak blockiness, then resolves back to full detail.
   // Driven by author.avatar_hover in _config.yml; no-ops if that image is absent.
   (function () {
-    var wrap = document.querySelector('.author__avatar');
+    var wrap = document.querySelector('div.author__avatar');
     if (!wrap) return;
     var img = wrap.querySelector('img');
     if (!img) return;
@@ -18,18 +18,28 @@
 
     var hoverImg = new Image();
     var ready = false;
-    hoverImg.onload = function () { ready = true; };
-    hoverImg.src = hoverSrc;
+    hoverImg.onload = function () {
+      ready = true;
+      if (img.matches(':hover')) toHover();
+    };
 
     var canvas = document.createElement('canvas');
     canvas.className = 'author__avatar-fx';
     canvas.setAttribute('aria-hidden', 'true');
+    // Keep essential geometry beside the script: even an older cached stylesheet
+    // must never put the canvas into normal flow as a second portrait.
+    canvas.style.cssText = 'position:absolute;display:none;border-radius:50%;pointer-events:none;';
+    wrap.style.position = 'relative';
     var ctx = canvas.getContext('2d');
+    var buffer = document.createElement('canvas');
+    var bufferCtx = buffer.getContext('2d');
+    if (!ctx || !bufferCtx) return;
     wrap.appendChild(canvas);
     wrap.classList.add('has-avatar-fx');
 
     var raf = null;
     var on = false;
+    var progress = 0;
 
     // Lay the canvas exactly over the avatar's content box, so the existing
     // padding and border ring stay visible around it.
@@ -74,11 +84,12 @@
       var scale = Math.max(sw / iw, sh / ih);
       var dw = iw * scale, dh = ih * scale;
 
-      ctx.imageSmoothingEnabled = true;
+      buffer.width = sw;
+      buffer.height = sh;
+      bufferCtx.drawImage(source, (sw - dw) / 2, (sh - dh) / 2, dw, dh);
       ctx.clearRect(0, 0, W, H);
-      ctx.drawImage(source, (sw - dw) / 2, (sh - dh) / 2, dw, dh);
       ctx.imageSmoothingEnabled = false;
-      ctx.drawImage(canvas, 0, 0, sw, sh, 0, 0, W, H);
+      ctx.drawImage(buffer, 0, 0, sw, sh, 0, 0, W, H);
     }
 
     function ease(p) {
@@ -103,60 +114,61 @@
       });
     }
 
-    function usable() {
-      if (!ready || !img.complete) return false;
-      // place() measures against layout, so the canvas has to be displayed
-      // before it can be positioned.
-      canvas.classList.add('is-on');
-      if (place()) return true;
-      canvas.classList.remove('is-on');
-      return false;
+    function setVisible(visible) {
+      canvas.style.display = visible ? 'block' : 'none';
+      canvas.classList.toggle('is-on', visible);
     }
 
-    function show(source) {
-      canvas.classList.add('is-on');
-      draw(source, 1);
+    function render() {
+      // A single reversible timeline keeps rapid enter/leave gestures continuous.
+      var split = OUT_MS / (OUT_MS + IN_MS);
+      var source = progress < split ? img : hoverImg;
+      var pixelation = progress < split ?
+        ease(progress / split) : 1 - ease((progress - split) / (1 - split));
+      draw(source, 1 + (MAX_BLOCK - 1) * pixelation);
     }
 
-    function toHover() {
-      if (on || !usable()) return;
-      on = true;
-      if (reduce) { show(hoverImg); return; }
-      animate(OUT_MS, function (p) {
-        draw(img, 1 + (MAX_BLOCK - 1) * ease(p));
+    function transition(hover) {
+      if (!ready || !img.complete || !img.naturalWidth || !place()) return;
+      on = hover;
+      stop();
+      var target = hover ? 1 : 0;
+      if (reduce || progress === target) {
+        progress = target;
+        render();
+        setVisible(hover);
+        return;
+      }
+      var start = progress;
+      animate((OUT_MS + IN_MS) * Math.abs(target - start), function (p) {
+        progress = start + (target - start) * p;
+        render();
       }, function () {
-        animate(IN_MS, function (p) {
-          draw(hoverImg, MAX_BLOCK - (MAX_BLOCK - 1) * ease(p));
-        });
+        if (!on) setVisible(false);
       });
+      setVisible(true);
     }
 
-    function toBase() {
-      if (!on) return;
-      on = false;
-      if (!usable()) { stop(); canvas.classList.remove('is-on'); return; }
-      if (reduce) { canvas.classList.remove('is-on'); return; }
-      animate(OUT_MS, function (p) {
-        draw(hoverImg, 1 + (MAX_BLOCK - 1) * ease(p));
-      }, function () {
-        animate(IN_MS, function (p) {
-          draw(img, MAX_BLOCK - (MAX_BLOCK - 1) * ease(p));
-        }, function () {
-          canvas.classList.remove('is-on');
-        });
-      });
-    }
+    function toHover() { transition(true); }
+    function toBase() { transition(false); }
 
-    wrap.addEventListener('mouseenter', toHover);
-    wrap.addEventListener('mouseleave', toBase);
-    // Touch screens have no hover, so let a tap flip it.
-    wrap.addEventListener('click', function () {
-      if (on) { toBase(); } else { toHover(); }
+    // Only the portrait is the hover target, not the empty sidebar beside it.
+    img.addEventListener('pointerenter', function (event) {
+      if (event.pointerType !== 'touch') toHover();
     });
+    img.addEventListener('pointerleave', function (event) {
+      if (event.pointerType !== 'touch') toBase();
+    });
+    img.addEventListener('pointerup', function (event) {
+      if (event.pointerType === 'touch') transition(!on);
+    });
+    img.addEventListener('load', function () {
+      if (img.matches(':hover')) toHover();
+    });
+    hoverImg.src = hoverSrc;
 
     window.addEventListener('resize', function () {
-      if (!on) return;
-      if (place()) draw(hoverImg, 1);
+      if ((on || progress > 0) && place()) render();
     });
   })();
 </script>
