@@ -23,13 +23,13 @@ author:
   name             : "Bowen Jing"
   avatar           : "images/android-chrome-512x512.png"
   bio              : "Tech Lead, Tuojing Intelligence"
-  location         : "Manchester, UK"
+  location         : "Beijing, China"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=7ICz8uAAAAAJ"
   email            : "Arthur12137@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
-  uri              : "https://arthur12137.com/"
+  uri              :
   bitbucket        :
   codepen          :
   dribbble         :
@@ -39,7 +39,7 @@ author:
   github           : "Bowen12137"
   google_plus      :
   keybase          :
-  instagram        : "arthur12137"
+  instagram        :
   impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "bowenjing"
@@ -47,7 +47,7 @@ author:
   orcid            : "https://orcid.org/0009-0009-7169-6643"
   pinterest        :
   soundcloud       :
-  stackoverflow    : "https://stackoverflow.com/users/18625146/bowen-jing"
+  stackoverflow    :
   steam            :
   tumblr           :
   twitter          : 

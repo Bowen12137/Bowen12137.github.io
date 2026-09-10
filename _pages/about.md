@@ -73,7 +73,7 @@ Mingxin Wang, Bin Hu, Bin Qian, Kaitao Jiang, Haoning Wu, Feng Yan, **Bowen Jing
 [**SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation**](https://arxiv.org/abs/2607.04234)  
 **Bowen Jing\***, Mingxin Wang\*, Ruiyang Hao, Chenchen Ge, Hanwen Shen, Junjie He, Yang Cui, Yiming Hou, Weitao Zhou, Jiawei Wang, Minglei Li, Dandan Zhang, Ding Zhao, Houde Liu, Xiaofan Li, Si Liu, Ping Luo, Haibao Yu  
 
-[**Project Page**](https://softvtbench.github.io/) • [**arXiv**](https://arxiv.org/abs/2607.04234) • [**ECCV 2026 Workshop (Oral)**](https://trustworthy-world-models.github.io/ECCV2026/)  
+[**Project Page**](https://softvtbench.github.io/) • [**Tuojing Page**](https://tuojingai.github.io/?p=softvtbench) • [**arXiv**](https://arxiv.org/abs/2607.04234) • [**ECCV 2026 Workshop (Oral)**](https://trustworthy-world-models.github.io/ECCV2026/)  
 - An early version was accepted as an **Oral** at the **Safe World Models for Trustworthy Embodied AI** workshop, ECCV 2026.
 - Released a **deformation-aware visuo-tactile benchmark** for physically constrained manipulation of deformable objects.
 - Collected **4,000 expert demonstrations** across **40 tasks in 4 suites** over **50+ deformable assets**.
@@ -90,7 +90,7 @@ Mingxin Wang, Bin Hu, Bin Qian, Kaitao Jiang, Haoning Wu, Feng Yan, **Bowen Jing
 [**CounterScene: Counterfactual Causal Reasoning in Generative World Models for Safety-Critical Closed-Loop Evaluation**](https://arxiv.org/abs/2603.21104)  
 **Bowen Jing**, Ruiyang Hao, Weitao Zhou, Haibao Yu  
 
-[**arXiv**](https://arxiv.org/abs/2603.21104) • [**ECCV 2026 Workshop (Oral)**](https://trustworthy-world-models.github.io/ECCV2026/)  
+[**Project Page**](https://tuojingai.github.io/?p=counterscene) • [**arXiv**](https://arxiv.org/abs/2603.21104) • [**ECCV 2026 Workshop (Oral)**](https://trustworthy-world-models.github.io/ECCV2026/)  
 - An early version was accepted as an **Oral** at the **Safe World Models for Trustworthy Embodied AI** workshop, ECCV 2026.
 - Introduced a safety-critical generative world model with **counterfactual causal reasoning** for closed-loop autonomous driving evaluation.  
 - Built a **Causal Interaction Graph (CIG)** to identify conflict-aware agent relationships and guide adversarial agent selection.  
@@ -107,7 +107,7 @@ Mingxin Wang, Bin Hu, Bin Qian, Kaitao Jiang, Haoning Wu, Feng Yan, **Bowen Jing
 [**ReconDrive: Fast Feed-Forward 4D Gaussian Splatting for Autonomous Driving Scene Reconstruction**](https://arxiv.org/abs/2603.07552)  
 Haibao Yu, Kuntao Xiao, Jiahang Wang, Ruiyang Hao, Yuxin Huang, Guoran Hu, Haifang Qin, **Bowen Jing**, Yuntian Bo, Ping Luo  
 
-[**arXiv**](https://arxiv.org/abs/2603.07552)  
+[**Project Page**](https://tuojingai.github.io/?p=recondrive) • [**arXiv**](https://arxiv.org/abs/2603.07552)  
 - Proposed a **feed-forward 4D Gaussian scene reconstruction** framework for autonomous driving with fast novel-view synthesis.  
 - Combined **DINO**, **SAM2**, and dual prediction heads to jointly estimate Gaussian parameters and centers from multi-view sequences.  
 - Introduced a **static-dynamic 4D composition** design for temporally consistent scene modeling without per-scene optimization.  
