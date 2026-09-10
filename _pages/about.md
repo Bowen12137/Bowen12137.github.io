@@ -154,15 +154,18 @@ Haibao Yu, Kuntao Xiao, Jiahang Wang, Ruiyang Hao, Yuxin Huang, Guoran Hu, Haifa
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Master Dissertation 2024</div><img src='_pages/images/e2e.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MSc Dissertation 2024</div><img src='_pages/images/e2e.png' alt="e2e" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**End-to-End Autonomous Driving System with Middle Fusion and Attention**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
-**Bowen Jing**
+[**Multi-modal Sensor Fusion for End-to-End Autonomous Driving**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
+**Bowen Jing** — University of Manchester, MSc dissertation
 
-[**Project Report**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
-- Built a multimodal AV system integrating LiDAR and RGB via channel-attentive fusion.
-- Deployed in CARLA and validated via extensive ablation studies.
+[**Dissertation**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
+- Fused **camera and LiDAR in latent space** rather than at the raw or the decision level: modality-specific encoders produce feature maps that are spatially aligned and concatenated, then reweighted by **channel attention** so the planner can lean on whichever modality still carries signal — which is the whole point under the adverse weather this work targets.
+- Rolled the fused latent state forward with a **GRU waypoint predictor**, so the trajectory comes out of temporal prediction over fused features instead of a single-frame regression — the same instinct that later drew me to world models.
+- Evaluated **closed-loop in CARLA** across urban scenarios and weather conditions, on Driving Score, Route Completion and Infraction Score rather than open-loop imitation error.
+- Placed the model deliberately on the efficiency side of the accuracy–compute trade-off: **far cheaper to run** than Transfuser- and Interfuser-class systems, at a lower absolute driving score, and argued for that point on the curve.
+
 </div></div>
 
 
