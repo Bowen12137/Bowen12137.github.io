@@ -23,23 +23,17 @@ redirect_from:
 
 <a href='https://scholar.google.com/citations?user=7ICz8uAAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&labelColor=f6f6f6&color=9cf&style=flat&label=citations&cacheSeconds=3600"></a>
 
-> I want robots that work the way a person does when handed an unfamiliar task — hold a goal, draw on what experience has already taught them, adjust when the environment turns out not to be what they expected, and do all of it safely enough to belong in ordinary human spaces.
+> I want robots that work the way a person does with an unfamiliar task — hold a goal, use what experience has already taught them, adjust when the environment is not what they expected, and stay safe enough to belong in ordinary human spaces.
 
-**Most of what limits an embodied policy is settled before the architecture is chosen. It is settled by the data distribution the policy was fit to.** Two failures follow from that, and they point in opposite directions.
+**What limits an embodied policy is settled before the architecture is chosen — by the data distribution it was fit to.** That fails in two opposite directions: *inside* the distribution, learning collapses diversity into an average no demonstrator ever performed; *outside* it, the data that matters most is the data nobody collected, because safety-critical events are rare by construction.
 
-*Inside* the distribution, learning collapses diversity: fit to demonstrations that disagree with one another, a policy returns their average — a behavior no demonstrator ever performed. *Outside* it, the data that matters most is the data nobody collected; safety-critical events are rare by construction, which is precisely what makes them safety-critical.
+- **Physical AI**: contact-rich manipulation and visuo-tactile perception — what touch reports about deformation, force and slip belongs in the problem, not in a sensor spec.
+- **World Models**: tying observations and actions to their consequences, so experience can be generated rather than waited for — vision-language-action and world-action models, diffusion and flow matching.
+- **Safe AI**: constructing the safety-critical cases logs never contain, and measuring harm rather than task completion.
 
-So I work at both edges of the data manifold: preserving the structure inside it, and deliberately constructing what lies beyond it. **World models** are what make the second tractable — a model that ties observations and actions to their consequences can generate experience instead of waiting to encounter it. My methods are generative: vision-language-action models, world-action models, diffusion and flow matching.
+This began with end-to-end autonomous driving during my master's. **StyleDrive** takes on the first failure, making driving preference explicit so a policy can hold a position inside the manifold rather than its centroid. **CounterScene** takes on the second, steering a generative world model toward safety-critical counterfactuals produced on purpose rather than met by luck. **SoftVTBench** asks what to measure once the robot is in contact: a policy can finish its task and still have crushed the object, and task success cannot see that.
 
-That line of work began with end-to-end autonomous driving during my master's, on the algorithms themselves, and has developed through three projects.
-
-**StyleDrive** takes up the first failure. Human driving is not one behavior but a family of them, and an end-to-end model trained on that family collapses it into a single default that matches no real driver. StyleDrive makes driving preference explicit — annotation, conditioning, and a style-aware metric — so a policy can hold a position within the manifold instead of its centroid.
-
-**CounterScene** takes up the second. Rather than sampling more of what was already logged, it steers a generative world model toward what was not: counterfactual, safety-critical scenarios produced on purpose rather than come across by luck.
-
-**SoftVTBench** asks what to measure once the robot is actually in contact. A manipulation policy can complete its task and still have crushed, torn, or dropped the object on the way there — task success cannot see any of that. SoftVTBench defines the problem in terms of what the contact did, through deformation-aware visuo-tactile evaluation.
-
-Which leads to the level of detail at which physical interaction is really decided. Bridging simulation and reality runs both ways: Real2Sim has to preserve the properties that determine a contact, and on the robot side embodiment, actuation and control decide whether a learned behavior survives transfer at all — approach velocity and direction, hand preshaping and timing, contact location and sequence, and the forces, deformation and slip that follow. **Reproducing a trajectory is only one part of reproducing an interaction.**
+Sim-to-real then runs both ways, down to approach velocity and direction, hand preshaping and timing, contact location and sequence, and the forces, deformation and slip that follow. **Reproducing a trajectory is only one part of reproducing an interaction.**
 
 Currently seeking a **PhD** in physical AI, world models, and safe embodied learning.
 
