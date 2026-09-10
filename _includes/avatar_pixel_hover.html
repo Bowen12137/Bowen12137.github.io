@@ -104,7 +104,13 @@
     }
 
     function usable() {
-      return ready && img.complete && place();
+      if (!ready || !img.complete) return false;
+      // place() measures against layout, so the canvas has to be displayed
+      // before it can be positioned.
+      canvas.classList.add('is-on');
+      if (place()) return true;
+      canvas.classList.remove('is-on');
+      return false;
     }
 
     function show(source) {
@@ -116,7 +122,6 @@
       if (on || !usable()) return;
       on = true;
       if (reduce) { show(hoverImg); return; }
-      canvas.classList.add('is-on');
       animate(OUT_MS, function (p) {
         draw(img, 1 + (MAX_BLOCK - 1) * ease(p));
       }, function () {

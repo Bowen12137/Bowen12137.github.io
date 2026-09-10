@@ -108,17 +108,19 @@
   }
 }
 
-// Canvas laid over the avatar for the pixelate-on-hover swap.
+// Canvas laid over the avatar for the pixelate-on-hover swap. Kept out of the
+// document flow entirely while idle, so it can never render as a second avatar.
 .author__avatar-fx {
   position: absolute;
-  display: block;
+  top: 0;
+  left: 0;
+  display: none;
   border-radius: 50%;
   pointer-events: none;
-  opacity: 0;
 }
 
 .author__avatar-fx.is-on {
-  opacity: 1;
+  display: block;
 }
 
 .author__content {
