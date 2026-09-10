@@ -1,7 +1,6 @@
 ---
 permalink: /
 title: ""
-excerpt: ""
 author_profile: true
 redirect_from: 
   - /about/
@@ -21,19 +20,19 @@ redirect_from:
 
 **Bowen Jing (荆博闻)** works on **Physical AI**: robots that act in the physical world, feel through touch what their own contact is doing, and interact safely enough to be trusted around people.
 
-<a href='https://scholar.google.com/citations?user=7ICz8uAAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&labelColor=f6f6f6&color=9cf&style=flat&label=citations&cacheSeconds=3600"></a>
+<a href='https://scholar.google.com/citations?user=7ICz8uAAAAAJ'><img alt="Google Scholar citation count" src="https://img.shields.io/endpoint?url={{ url | url_encode }}&labelColor=f6f6f6&color=9cf&style=flat&label=citations&cacheSeconds=3600"></a>
 
 > I want robots that work the way a person does with an unfamiliar task — hold a goal, use what experience has already taught them, adjust when the environment is not what they expected, and stay safe enough to belong in ordinary human spaces.
 
-**What limits an embodied policy is settled before the architecture is chosen — by the data distribution it was fit to.** That fails in two opposite directions: *inside* the distribution, learning collapses diversity into an average no demonstrator ever performed; *outside* it, the data that matters most is the data nobody collected, because safety-critical events are rare by construction.
+**An embodied policy is shaped by both its architecture and the data distribution it learns from.** I study two challenges: *within* the observed distribution, models can average over distinct preferences; *beyond* its coverage, rare but safety-critical situations may be missing from routine data collection.
 
 - **Physical AI**: contact-rich manipulation and visuo-tactile perception — what touch reports about deformation, force and slip belongs in the problem, not in a sensor spec.
 - **World Models**: tying observations and actions to their consequences, so experience can be generated rather than waited for — vision-language-action and world-action models, diffusion and flow matching.
-- **Safe AI**: constructing the safety-critical cases logs never contain, and measuring harm rather than task completion.
+- **Safe AI**: constructing safety-critical cases that are underrepresented in recorded data, and measuring harm rather than task completion.
 
-This began with end-to-end autonomous driving during my master's. **StyleDrive** takes on the first failure, making driving preference explicit so a policy can hold a position inside the manifold rather than its centroid. **CounterScene** takes on the second, steering a generative world model toward safety-critical counterfactuals produced on purpose rather than met by luck. **SoftVTBench** asks what to measure once the robot is in contact: a policy can finish its task and still have crushed the object, and task success cannot see that.
+This began with end-to-end autonomous driving during my master's. **StyleDrive** takes on the first failure, making driving preference explicit so a policy can represent distinct driving styles rather than average over them. **CounterScene** takes on the second, steering a generative world model toward safety-critical counterfactuals produced on purpose rather than met by luck. **SoftVTBench** asks what to measure once the robot is in contact: a policy can finish its task and still have crushed the object, and task success cannot see that.
 
-Sim-to-real then runs both ways, down to approach velocity and direction, hand preshaping and timing, contact location and sequence, and the forces, deformation and slip that follow. **Reproducing a trajectory is only one part of reproducing an interaction.**
+I approach the simulation–reality gap from both the environment (Real2Sim) and the robot embodiment (Sim2Real), down to approach velocity and direction, hand preshaping and timing, contact location and sequence, and the forces, deformation and slip that follow. **Reproducing a trajectory is only one part of reproducing an interaction.**
 
 Currently seeking a **PhD** in physical AI, world models, and safe embodied learning.
 
@@ -170,10 +169,12 @@ Haibao Yu, Kuntao Xiao, Jiahang Wang, Ruiyang Hao, Yuxin Huang, Guoran Hu, Haifa
 
 
 
-# 📖 Educations
-- *2023.09 – 2024.09*, MSc in Artificial Intelligence, University of Manchester  
+<span class="anchor" id="-educations"></span>
+
+# 📖 Education
+- *2023.09 – 2024.09*, MSc in Advanced Computer Science, University of Manchester  
   - Focus: Deep Learning, Computer Vision, Reinforcement Learning, Robotics  
-  - Dissertation: Comparative study of Deep Learning and Traditional Vision in Robotic Perception  
+  - Dissertation: Multi-modal Sensor Fusion for End-to-End Autonomous Driving
   - Graduated with Distinction (Top 10%)
 
 - *2020.09 – 2023.06*, BSc in Computer Science, University of Manchester  
