@@ -19,21 +19,29 @@ redirect_from:
 
 ## About
 
-**Bowen Jing (荆博闻)** works on **Physical AI**: robots that pursue goals, learn from accumulated experience, and adapt to conditions they were never trained on — safely enough to work around people.
+**Bowen Jing (荆博闻)** works on **Physical AI**: robots that act in the physical world, feel through touch what their own contact is doing, and interact safely enough to be trusted around people.
 
 <a href='https://scholar.google.com/citations?user=7ICz8uAAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&labelColor=f6f6f6&color=9cf&style=flat&label=citations&cacheSeconds=3600"></a>
 
-My work spans **end-to-end autonomous driving** and **robotic manipulation**, held together by one question: **what must an embodied agent learn from data before its behavior holds up outside the conditions that data covered?** I work on how a model represents the diversity of behavior inside the data it saw, how generative methods build experience beyond that coverage, and how evaluation exposes the limits that task success hides.
+> I want robots that work the way a person does when handed an unfamiliar task — hold a goal, draw on what experience has already taught them, adjust when the environment turns out not to be what they expected, and do all of it safely enough to belong in ordinary human spaces.
 
-- **World Models**: connecting observations and actions to their consequences, as a substrate for both learning and evaluation
-- **Physical AI**: contact-rich manipulation, visuo-tactile perception, deformable-object interaction
-- **Safe AI**: counterfactual scenario generation, robustness under distribution shift, evaluation that surfaces failure before deployment
+**Most of what limits an embodied policy is settled before the architecture is chosen. It is settled by the data distribution the policy was fit to.** Two failures follow from that, and they point in opposite directions.
 
-Bridging simulation and reality runs both ways. Real2Sim has to preserve the properties that actually decide an interaction; on the robot side, embodiment, actuation and control decide whether a learned behavior survives the transfer at all — approach velocity and direction, hand preshaping and timing, contact location and sequence, and the forces, deformation and slip that follow. **Reproducing a trajectory is only one part of reproducing an interaction.**
+*Inside* the distribution, learning collapses diversity: fit to demonstrations that disagree with one another, a policy returns their average — a behavior no demonstrator ever performed. *Outside* it, the data that matters most is the data nobody collected; safety-critical events are rare by construction, which is precisely what makes them safety-critical.
 
-> Long term: bring robots out of the laboratory and into ordinary homes and human society — capable enough to be useful, and safe enough to be trusted.
+So I work at both edges of the data manifold: preserving the structure inside it, and deliberately constructing what lies beyond it. **World models** are what make the second tractable — a model that ties observations and actions to their consequences can generate experience instead of waiting to encounter it. My methods are generative: vision-language-action models, world-action models, diffusion and flow matching.
 
-Currently seeking a **PhD** in physical AI, world models, and AI safety for embodied systems.
+That line of work began with end-to-end autonomous driving during my master's, on the algorithms themselves, and has developed through three projects.
+
+**StyleDrive** takes up the first failure. Human driving is not one behavior but a family of them, and an end-to-end model trained on that family collapses it into a single default that matches no real driver. StyleDrive makes driving preference explicit — annotation, conditioning, and a style-aware metric — so a policy can hold a position within the manifold instead of its centroid.
+
+**CounterScene** takes up the second. Rather than sampling more of what was already logged, it steers a generative world model toward what was not: counterfactual, safety-critical scenarios produced on purpose rather than come across by luck.
+
+**SoftVTBench** asks what to measure once the robot is actually in contact. A manipulation policy can complete its task and still have crushed, torn, or dropped the object on the way there — task success cannot see any of that. SoftVTBench defines the problem in terms of what the contact did, through deformation-aware visuo-tactile evaluation.
+
+Which leads to the level of detail at which physical interaction is really decided. Bridging simulation and reality runs both ways: Real2Sim has to preserve the properties that determine a contact, and on the robot side embodiment, actuation and control decide whether a learned behavior survives transfer at all — approach velocity and direction, hand preshaping and timing, contact location and sequence, and the forces, deformation and slip that follow. **Reproducing a trajectory is only one part of reproducing an interaction.**
+
+Currently seeking a **PhD** in physical AI, world models, and safe embodied learning.
 
 [Google Scholar](https://scholar.google.com/citations?user=7ICz8uAAAAAJ) • [GitHub](https://github.com/Bowen12137) • [LinkedIn](https://www.linkedin.com/in/bowenjing/) • [**CV**](/Bowen_CV.pdf)
 
