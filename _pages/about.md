@@ -20,20 +20,18 @@ redirect_from:
 # Learning from experience. Acting in the physical world.
 
 <div class="phd-notice" markdown="1">
-**Seeking PhD opportunities** in world models, embodied learning, and physical interaction. [Get in touch](mailto:Arthur12137@gmail.com) · [View CV](/Bowen_CV.pdf)
+**Seeking PhD opportunities** in Physical AI, world models, and safe embodied robotics. [Get in touch](mailto:Arthur12137@gmail.com) · [View CV](/Bowen_CV.pdf)
 </div>
 
-I am **Bowen Jing (荆博闻)**, Tech Lead at **Tuojing Intelligence** and a master's graduate of the **University of Manchester**. My work spans end-to-end autonomous driving and robotic manipulation.
+I am **Bowen Jing (荆博闻)**, Tech Lead at **Tuojing Intelligence** and a master's graduate of the **University of Manchester**. My research connects **Physical AI, World Models, and Safe AI** in embodied robotics: understanding physical interactions, anticipating action consequences, and making safety part of successful task execution.
 
-**Learning from data means confronting both its diversity and its gaps.** Within the observed distribution, policies can average away meaningful preferences; beyond its coverage, they face situations they have never learned to handle. I address both through preference-aware learning and targeted generation of rare, safety-critical experience.
+**I approach these questions through the design of data distributions.** Within the observed distribution, policies should preserve and express meaningful behavioral preferences rather than average them away. Beyond its coverage, I pursue targeted generation of rare, safety-critical scenarios for learning and evaluation. The question is which experiences a robot needs—and how to construct and evaluate them.
 
-- **Physical AI:** ground manipulation in vision and touch, including the deformation, forces, and slip that contact produces.
-- **World Models:** connect actions to physical consequences, supporting prediction and controlled generation of experience.
-- **Safe AI:** expose failures through safety-critical scenarios and evaluate physical harm alongside task completion.
+My methods include **vision-language-action models (VLA)** and **world-action models (WAM)** for connecting perception, prediction, and control, alongside **diffusion and flow matching** for generative modeling and controlled sampling. These methods support learning from behavioral diversity and constructing experience beyond routine data collection.
 
-**Reproducing a trajectory is only one part of reproducing an interaction.** I connect environment reconstruction (**Real2Sim**) with embodiment-aware transfer (**Sim2Real**), attending to approach velocity, hand preshaping, contact timing and sequence, and the resulting forces, deformation, and slip.
+**Reproducing a trajectory is only one part of reproducing an interaction.** My **Real2Sim / Sim2Real** agenda connects environment properties with robot dynamics, considering approach velocity, hand preshaping, contact timing and sequence, and the resulting forces, deformation, and slip. Vision and touch ground this work in physical feedback.
 
-Long term, I want robots to pursue goals, learn from accumulated experience, and adapt safely enough to participate in everyday human life.
+Long term, I want robots to pursue goals, learn from accumulated experience, and adapt through interaction, enabling safe participation in everyday human life.
 
 <p class="profile-links"><a href="https://scholar.google.com/citations?user=7ICz8uAAAAAJ">Google Scholar ↗</a><a href="https://github.com/Bowen12137">GitHub ↗</a><a href="https://www.linkedin.com/in/bowenjing/">LinkedIn ↗</a><a href="/Bowen_CV.pdf"><strong>CV ↗</strong></a></p>
 </div>
@@ -78,7 +76,7 @@ Ruiyang Hao, **Bowen Jing**, Haibao Yu, Zaiqing Nie
 <p class="project-theme">02 / Define physically acceptable success</p>
 <h3 id="project-softvtbench">SoftVTBench</h3>
 <p class="project-question">Is a task successful if the object is damaged along the way?</p>
-<p class="project-role">Co-first author</p>
+<p class="project-role">First author</p>
 
 For deformable objects, reaching the goal does not establish that the interaction was acceptable. A robot may finish the task while excessively deforming the object. SoftVTBench treats the physical consequences of contact as part of the problem definition, making this distinction measurable.
 
