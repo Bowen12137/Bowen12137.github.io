@@ -14,164 +14,186 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-<span class='anchor' id='about-me'></span>
+<div class="research-intro" id="about-me" markdown="1">
+<p class="section-eyebrow">PHYSICAL AI · WORLD MODELS · SAFE AI</p>
 
-## About
+# Learning from experience. Acting in the physical world.
 
-**Bowen Jing (荆博闻)** works on **Physical AI**: robots that act in the physical world, feel through touch what their own contact is doing, and interact safely enough to be trusted around people.
+<div class="phd-notice" markdown="1">
+**Seeking PhD opportunities** in world models, embodied learning, and physical interaction. [Get in touch](mailto:Arthur12137@gmail.com) · [View CV](/Bowen_CV.pdf)
+</div>
 
-<a href='https://scholar.google.com/citations?user=7ICz8uAAAAAJ'><img alt="Google Scholar citation count" src="https://img.shields.io/endpoint?url={{ url | url_encode }}&labelColor=f6f6f6&color=9cf&style=flat&label=citations&cacheSeconds=3600"></a>
+I am **Bowen Jing (荆博闻)**, Tech Lead at **Tuojing Intelligence** and a master's graduate of the **University of Manchester**. My work spans end-to-end autonomous driving and robotic manipulation.
 
-> I want robots that work the way a person does with an unfamiliar task — hold a goal, use what experience has already taught them, adjust when the environment is not what they expected, and stay safe enough to belong in ordinary human spaces.
+**Learning from data means confronting both its diversity and its gaps.** Within the observed distribution, policies can average away meaningful preferences; beyond its coverage, they face situations they have never learned to handle. I address both through preference-aware learning and targeted generation of rare, safety-critical experience.
 
-**An embodied policy is shaped by both its architecture and the data distribution it learns from.** I study two challenges: *within* the observed distribution, models can average over distinct preferences; *beyond* its coverage, rare but safety-critical situations may be missing from routine data collection.
+- **Physical AI:** ground manipulation in vision and touch, including the deformation, forces, and slip that contact produces.
+- **World Models:** connect actions to physical consequences, supporting prediction and controlled generation of experience.
+- **Safe AI:** expose failures through safety-critical scenarios and evaluate physical harm alongside task completion.
 
-- **Physical AI**: contact-rich manipulation and visuo-tactile perception — what touch reports about deformation, force and slip belongs in the problem, not in a sensor spec.
-- **World Models**: tying observations and actions to their consequences, so experience can be generated rather than waited for — vision-language-action and world-action models, diffusion and flow matching.
-- **Safe AI**: constructing safety-critical cases that are underrepresented in recorded data, and measuring harm rather than task completion.
+**Reproducing a trajectory is only one part of reproducing an interaction.** I connect environment reconstruction (**Real2Sim**) with embodiment-aware transfer (**Sim2Real**), attending to approach velocity, hand preshaping, contact timing and sequence, and the resulting forces, deformation, and slip.
 
-This began with end-to-end autonomous driving during my master's. **StyleDrive** takes on the first failure, making driving preference explicit so a policy can represent distinct driving styles rather than average over them. **CounterScene** takes on the second, steering a generative world model toward safety-critical counterfactuals produced on purpose rather than met by luck. **SoftVTBench** asks what to measure once the robot is in contact: a policy can finish its task and still have crushed the object, and task success cannot see that.
+Long term, I want robots to pursue goals, learn from accumulated experience, and adapt safely enough to participate in everyday human life.
 
-I approach the simulation–reality gap from both the environment (Real2Sim) and the robot embodiment (Sim2Real), down to approach velocity and direction, hand preshaping and timing, contact location and sequence, and the forces, deformation and slip that follow. **Reproducing a trajectory is only one part of reproducing an interaction.**
+<p class="profile-links"><a href="https://scholar.google.com/citations?user=7ICz8uAAAAAJ">Google Scholar ↗</a><a href="https://github.com/Bowen12137">GitHub ↗</a><a href="https://www.linkedin.com/in/bowenjing/">LinkedIn ↗</a><a href="/Bowen_CV.pdf"><strong>CV ↗</strong></a></p>
+</div>
 
-Currently seeking a **PhD** in physical AI, world models, and safe embodied learning.
+<span class="anchor" id="-publications"></span>
 
-[Google Scholar](https://scholar.google.com/citations?user=7ICz8uAAAAAJ) • [GitHub](https://github.com/Bowen12137) • [LinkedIn](https://www.linkedin.com/in/bowenjing/) • [**CV**](/Bowen_CV.pdf)
+## Selected Research
 
+<p class="section-lead">Three connected questions: which behavioral differences should a policy preserve, what makes an interaction acceptable, and how can we test situations that recorded experience rarely covers?</p>
 
+<article class="selected-project" aria-labelledby="project-styledrive">
+<div class="project-figure"><a href="https://styledrive.github.io/" aria-label="StyleDrive project page"><img src="_pages/images/styledrive.png" alt="StyleDrive research overview" loading="lazy"></a><span class="project-venue">AAAI 2026 · Oral</span></div>
+<div class="project-body" markdown="1">
+<p class="project-theme">01 / Preserve meaningful behavioral differences</p>
+<h3 id="project-styledrive">StyleDrive</h3>
+<p class="project-question">When several actions are valid, whose preference should a policy follow?</p>
+<p class="project-role">Second author</p>
 
-# 🔥 News
+Driving demonstrations do not prescribe a single response: different drivers can make different choices in the same situation. Treating these differences as noise risks learning a default behavior that obscures individual preferences. StyleDrive makes preference an explicit part of the learning problem.
+
+**Approach.** Style-aware annotation, preference-conditioned policies, and the SM-PDMS metric bring behavioral diversity into both learning and evaluation.
+
+**Significance.** This extends the question from whether a policy can drive competently to whether it can do so in a way that reflects a specified preference.
+
+<p class="project-evidence">A dataset and benchmark for personalized end-to-end driving, with an explicit measure of driving-style alignment.</p>
+
+[**Project Page / Code**](https://styledrive.github.io/) • [**arXiv**](https://arxiv.org/abs/2506.23982)
+
+<details class="citation-details" markdown="1">
+<summary>Paper title &amp; authors</summary>
+
+[**StyleDrive: Towards Driving-Style Aware Benchmarking of End-To-End Autonomous Driving**](https://styledrive.github.io/)  
+Ruiyang Hao, **Bowen Jing**, Haibao Yu, Zaiqing Nie  
+
+</details>
+</div>
+</article>
+
+<article class="selected-project" aria-labelledby="project-softvtbench">
+<div class="project-figure"><a href="https://softvtbench.github.io/" aria-label="SoftVTBench project page"><img src="_pages/images/softvtbench.png" alt="SoftVTBench research overview" loading="lazy"></a><span class="project-venue">ECCV 2026 Workshop · Oral</span></div>
+<div class="project-body" markdown="1">
+<p class="project-theme">02 / Define physically acceptable success</p>
+<h3 id="project-softvtbench">SoftVTBench</h3>
+<p class="project-question">Is a task successful if the object is damaged along the way?</p>
+<p class="project-role">Co-first author</p>
+
+For deformable objects, reaching the goal does not establish that the interaction was acceptable. A robot may finish the task while excessively deforming the object. SoftVTBench treats the physical consequences of contact as part of the problem definition, making this distinction measurable.
+
+**Approach.** Synchronized visual, tactile, and action data are paired with deformation-aware tasks and FEM-based evaluation.
+
+**Significance.** The benchmark makes physical constraints part of what a policy is evaluated against, and provides a basis for studying when touch helps distinguish task completion from acceptable interaction.
+
+<p class="project-evidence">4,000 demonstrations · 40 tasks · 50+ deformable assets. FEM-based metrics evaluate deformation alongside task success.</p>
+
+[**Project Page**](https://softvtbench.github.io/) • [**Tuojing Page**](https://tuojingai.github.io/?p=softvtbench) • [**arXiv**](https://arxiv.org/abs/2607.04234)
+
+<details class="citation-details" markdown="1">
+<summary>Paper title &amp; authors</summary>
+
+[**SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation**](https://arxiv.org/abs/2607.04234)  
+**Bowen Jing\***, Mingxin Wang\*, Ruiyang Hao, Chenchen Ge, Hanwen Shen, Junjie He, Yang Cui, Yiming Hou, Weitao Zhou, Jiawei Wang, Minglei Li, Dandan Zhang, Ding Zhao, Houde Liu, Xiaofan Li, Si Liu, Ping Luo, Haibao Yu  
+
+</details>
+</div>
+</article>
+
+<article class="selected-project" aria-labelledby="project-counterscene">
+<div class="project-figure"><a href="https://tuojingai.github.io/?p=counterscene" aria-label="CounterScene project page"><img src="_pages/images/counterscene.jpg" alt="CounterScene research overview" loading="lazy"></a><span class="project-venue">ECCV 2026 Workshop · Oral</span></div>
+<div class="project-body" markdown="1">
+<p class="project-theme">03 / Probe the limits of recorded experience</p>
+<h3 id="project-counterscene">CounterScene</h3>
+<p class="project-question">How can we expose failures that routine experience rarely reveals?</p>
+<p class="project-role">First author</p>
+
+A policy can perform well on recorded driving data while remaining vulnerable to rare interactions that those logs barely cover. CounterScene turns scenario generation into a targeted search for plausible conditions that expose these vulnerabilities.
+
+**Approach.** Counterfactual causal reasoning and guidance during generation shape multi-agent behavior toward safety-critical interactions, which are evaluated in closed loop.
+
+**Significance.** This gives the world model a role beyond reproducing typical behavior: it becomes a tool for actively examining the limits of a policy’s experience.
+
+<p class="project-evidence">Closed-loop evaluation tests collision-inducing scenarios and transfer from Waymo Open Motion to nuPlan.</p>
+
+[**Project Page**](https://tuojingai.github.io/?p=counterscene) • [**arXiv**](https://arxiv.org/abs/2603.21104)
+
+<details class="citation-details" markdown="1">
+<summary>Paper title &amp; authors</summary>
+
+[**CounterScene: Counterfactual Causal Reasoning in Generative World Models for Safety-Critical Closed-Loop Evaluation**](https://arxiv.org/abs/2603.21104)  
+**Bowen Jing**, Ruiyang Hao, Weitao Zhou, Haibao Yu  
+
+</details>
+</div>
+</article>
+
+<span class="anchor" id="-news"></span>
+
+## News
 - *2026.09*: &nbsp;🏆 Early versions of **SoftVTBench** and **CounterScene** were accepted as **Orals** at the **Safe World Models for Trustworthy Embodied AI** workshop, [ECCV 2026](https://trustworthy-world-models.github.io/ECCV2026/).  
 - *2026.08*: &nbsp;🪨 Our paper **"KnockGS: Interaction-Grounded Calibration of Physical Gaussian Representations"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2608.27365) · [Code](https://github.com/TuojingAI/KnockGS)  
 - *2026.07*: &nbsp;🤖 Our paper **"ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2607.28993)  
 - *2026.07*: &nbsp;🧈 Released **SoftVTBench**, a deformation-aware visuo-tactile dataset and benchmark for deformable-object manipulation. [arXiv](https://arxiv.org/abs/2607.04234) · [Project Page](https://softvtbench.github.io/)  
 - *2026.03*: &nbsp;🌍 Our paper **"CounterScene: Counterfactual Causal Reasoning in Generative World Models for Safety-Critical Closed-Loop Evaluation"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2603.21104)  
 - *2026.03*: &nbsp;🏗️ Our paper **"ReconDrive: Fast Feed-Forward 4D Gaussian Splatting for Autonomous Driving Scene Reconstruction"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2603.07552)  
-- *2025.11*: &nbsp;🏆 Our work **StyleDrive** has been **accepted as an Oral presentation at AAAI 2026**.  
+- *2025.11*: &nbsp;🏆 Our work **StyleDrive** has been **accepted as an Oral presentation at AAAI 2026**.
 
+## Additional Research
 
-
-# 📝 Publications 
-
-<sub>\* Equal contribution. Ordered by my role in the work rather than by date.</sub>
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge badge--gold-sheen">ECCV 2026 Workshop Oral</div><img src='_pages/images/counterscene.jpg' alt="counterscene" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[**CounterScene: Counterfactual Causal Reasoning in Generative World Models for Safety-Critical Closed-Loop Evaluation**](https://arxiv.org/abs/2603.21104)  
-**Bowen Jing**, Ruiyang Hao, Weitao Zhou, Haibao Yu  
-
-[**Project Page**](https://tuojingai.github.io/?p=counterscene) • [**arXiv**](https://arxiv.org/abs/2603.21104) • [**ECCV 2026 Workshop (Oral)**](https://trustworthy-world-models.github.io/ECCV2026/)  
-- An early version was accepted as an **Oral** at the **Safe World Models for Trustworthy Embodied AI** workshop, ECCV 2026.
-- Introduced a safety-critical generative world model with **counterfactual causal reasoning** for closed-loop autonomous driving evaluation.  
-- Built a **Causal Interaction Graph (CIG)** to identify conflict-aware agent relationships and guide adversarial agent selection.  
-- Designed a **dynamic counterfactual guidance** strategy to optimize challenging yet realistic multi-agent trajectories during denoising.  
-- Demonstrated stronger collision-inducing capability and robust transfer from **Waymo Open Motion** to **nuPlan**.  
-
-</div></div>
-
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge badge--gold-sheen">ECCV 2026 Workshop Oral</div><img src='_pages/images/softvtbench.png' alt="softvtbench" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[**SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation**](https://arxiv.org/abs/2607.04234)  
-**Bowen Jing\***, Mingxin Wang\*, Ruiyang Hao, Chenchen Ge, Hanwen Shen, Junjie He, Yang Cui, Yiming Hou, Weitao Zhou, Jiawei Wang, Minglei Li, Dandan Zhang, Ding Zhao, Houde Liu, Xiaofan Li, Si Liu, Ping Luo, Haibao Yu  
-
-[**Project Page**](https://softvtbench.github.io/) • [**Tuojing Page**](https://tuojingai.github.io/?p=softvtbench) • [**arXiv**](https://arxiv.org/abs/2607.04234) • [**ECCV 2026 Workshop (Oral)**](https://trustworthy-world-models.github.io/ECCV2026/)  
-- An early version was accepted as an **Oral** at the **Safe World Models for Trustworthy Embodied AI** workshop, ECCV 2026.
-- Released a **deformation-aware visuo-tactile benchmark** for physically constrained manipulation of deformable objects.
-- Collected **4,000 expert demonstrations** across **40 tasks in 4 suites** over **50+ deformable assets**.
-- Synchronized **20 Hz multimodal streams**: multi-view RGB, tactile RGB, marker motion, proprioception, language, and actions.
-- Introduced **FEM-based deformation metrics** so evaluation measures what contact actually did to the object, not just task success.
-
-</div></div>
-
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge badge--gold-sheen">AAAI 2026 Oral</div><img src='_pages/images/styledrive.png' alt="styledrive" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[**StyleDrive: Towards Driving-Style Aware Benchmarking of End-To-End Autonomous Driving**](https://styledrive.github.io/)  
-Ruiyang Hao, **Bowen Jing**, Haibao Yu, Zaiqing Nie  
-
-[**Project Page / Code**](https://styledrive.github.io/) • [**arXiv**](https://arxiv.org/abs/2506.23982)  
-- 🚗 Introduced the **first large-scale real-world dataset** for driving-style–aware E2E autonomous driving.  
-- 🧠 Developed a **hybrid annotation pipeline** combining motion heuristics and VLM reasoning.  
-- 📊 Proposed the **SM-PDMS metric** and established the **first benchmark** for personalized E2EAD.  
-- 💡 Achieved **notable improvements in human-like driving** through style conditioning.  
-
-</div></div>
-
-
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='_pages/images/knockgs.png' alt="knockgs" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+<div class="additional-project" markdown="1">
 
 [**KnockGS: Interaction-Grounded Calibration of Physical Gaussian Representations**](https://arxiv.org/abs/2608.27365)  
 Chenchen Ge\*, Hanwen Shen\*, **Bowen Jing**, Jiyuan Cai, Xiaofeng Wang, Hongsen Lei, Weitao Zhou, Dandan Zhang, Haibao Yu  
 
-[**Project Page**](https://tuojingai.github.io/?p=knockgs) • [**arXiv**](https://arxiv.org/abs/2608.27365) • [**Code**](https://github.com/TuojingAI/KnockGS)  
-- Estimated the **elasticity and density scales** of a 3D Gaussian object from its dynamics under a known applied force, instead of assuming material parameters are given.
-- Turned the **force-induced response into a calibration signal**: temporal response features are extracted from the observed dynamics and the two material scales are read off them.
-- **Froze the estimate and wrote it back** into the same simulator, so it is tested on an interaction it was never fitted to.
-- Recovered the scales more accurately than regression, global regression, or a fixed default, measured on 3D particle trajectories, response-curve statistics, and rendered-frame quality.
+Calibrating elasticity and density from an object’s response to an applied force, then testing the estimated properties on held-out interactions.
 
-</div></div>
+[**Project Page**](https://tuojingai.github.io/?p=knockgs) • [**arXiv**](https://arxiv.org/abs/2608.27365) • [**Code**](https://github.com/TuojingAI/KnockGS)
 
+</div>
 
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='_pages/images/stwam.png' alt="stwam" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+<div class="additional-project" markdown="1">
 
 [**ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts**](https://arxiv.org/abs/2607.28993)  
 Mingxin Wang, Bin Hu, Bin Qian, Kaitao Jiang, Haoning Wu, Feng Yan, **Bowen Jing**, Ruiyang Hao, Enyi Wang, Kangning Niu, Yandan Yang, Mu Xu, Yan Wang, Houde Liu, Tianlun Li  
 
-[**arXiv**](https://arxiv.org/abs/2607.28993)  
-- Identified **Training-Distribution Hallucination**: pixel-generative future supervision hallucinates training-domain content instead of staying faithful to a visually shifted scene.
-- Showed via a controlled frame-triplet diagnosis that **DINOv3 features stay more stable across visual shifts** than Wan-VAE latents while better preserving task-state distinctions.
-- Proposed **Dual-Space Future Experts (DSFE)** and **Current-Anchored Intent Retrieval (CAIR)**, trained end-to-end with **no explicit future generation at inference**.
-- Reached **98.7% on LIBERO** and **92.8% on RoboTwin 2.0**; improved zero-shot LIBERO-Plus by **21.3 points** over Fast-WAM and lifted real-world success under visual shift from **25.8% to 61.5%**.
+World-action modeling for manipulation under visual distribution shifts. Reported zero-shot LIBERO-Plus improvement of **21.3 points** over Fast-WAM, with real-world success under visual shift increasing from **25.8% to 61.5%**.
 
-</div></div>
+[**arXiv**](https://arxiv.org/abs/2607.28993)
 
+</div>
 
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2026</div><img src='_pages/images/recondrive.png' alt="recondrive" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+<div class="additional-project" markdown="1">
 
 [**ReconDrive: Fast Feed-Forward 4D Gaussian Splatting for Autonomous Driving Scene Reconstruction**](https://arxiv.org/abs/2603.07552)  
 Haibao Yu, Kuntao Xiao, Jiahang Wang, Ruiyang Hao, Yuxin Huang, Guoran Hu, Haifang Qin, **Bowen Jing**, Yuntian Bo, Ping Luo  
 
-[**Project Page**](https://tuojingai.github.io/?p=recondrive) • [**arXiv**](https://arxiv.org/abs/2603.07552)  
-- Proposed a **feed-forward 4D Gaussian scene reconstruction** framework for autonomous driving with fast novel-view synthesis.  
-- Combined **DINO**, **SAM2**, and dual prediction heads to jointly estimate Gaussian parameters and centers from multi-view sequences.  
-- Introduced a **static-dynamic 4D composition** design for temporally consistent scene modeling without per-scene optimization.  
-- Achieved competitive reconstruction quality with substantially higher efficiency on **nuScenes** compared with optimization-based methods.  
+Feed-forward 4D Gaussian scene reconstruction for autonomous driving, combining static and dynamic representations for efficient novel-view synthesis.
 
-</div></div>
+[**Project Page**](https://tuojingai.github.io/?p=recondrive) • [**arXiv**](https://arxiv.org/abs/2603.07552)
 
+</div>
 
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">MSc Dissertation 2024</div><img src='_pages/images/e2e.png' alt="e2e" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
+<div class="additional-project" markdown="1">
 
 [**Multi-modal Sensor Fusion for End-to-End Autonomous Driving**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
 **Bowen Jing** — University of Manchester, MSc dissertation
 
-[**Dissertation**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
-- Fused **camera and LiDAR in latent space** rather than at the raw or the decision level: modality-specific encoders produce feature maps that are spatially aligned and concatenated, then reweighted by **channel attention** so the planner can lean on whichever modality still carries signal — which is the whole point under the adverse weather this work targets.
-- Rolled the fused latent state forward with a **GRU waypoint predictor**, so the trajectory comes out of temporal prediction over fused features instead of a single-frame regression — the same instinct that later drew me to world models.
-- Evaluated **closed-loop in CARLA** across urban scenarios and weather conditions, on Driving Score, Route Completion and Infraction Score rather than open-loop imitation error.
-- Placed the model deliberately on the efficiency side of the accuracy–compute trade-off: **far cheaper to run** than Transfuser- and Interfuser-class systems, at a lower absolute driving score, and argued for that point on the curve.
+My MSc dissertation investigated camera–LiDAR fusion with channel attention and GRU waypoint prediction, evaluated closed-loop in CARLA across urban scenes and weather conditions.
 
-</div></div>
+[**Dissertation**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)
 
+</div>
 
+<span class="anchor" id="-experience"></span>
+
+## Experience
+- *2025.08 – Present* · **Tuojing Intelligence** — **Tech Lead**, Real2Sim2Real and tactile simulation  
+- *2025.02 – 2025.08* · **Tsinghua University, AIR** — Research Intern in **Large-Scale Autonomous Driving Data Mining**
 
 <span class="anchor" id="-educations"></span>
 
-# 📖 Education
+## Education
 - *2023.09 – 2024.09*, MSc in Advanced Computer Science, University of Manchester  
   - Focus: Deep Learning, Computer Vision, Reinforcement Learning, Robotics  
   - Dissertation: Multi-modal Sensor Fusion for End-to-End Autonomous Driving
@@ -180,7 +202,3 @@ Haibao Yu, Kuntao Xiao, Jiahang Wang, Ruiyang Hao, Yuxin Huang, Guoran Hu, Haifa
 - *2020.09 – 2023.06*, BSc in Computer Science, University of Manchester  
   - Specialized in software development and machine learning foundations  
   - Final Year Project: Spiking Neural Network
-
-# 💻 Experience
-- *2025.08 – Present* · **Tuojing Intelligence** — **Tech Lead**, Real2Sim2Real and tactile simulation  
-- *2025.02 – 2025.08* · **Tsinghua University, AIR** — Research Intern in **Large-Scale Autonomous Driving Data Mining**

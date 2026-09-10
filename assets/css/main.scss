@@ -161,3 +161,30 @@ button:focus-visible {
     outline: 2px solid #00369f;
     outline-offset: 3px;
 }
+
+// Research-first homepage: keep the existing sidebar and typography.
+.research-intro {
+    max-width: 960px;
+    h1 { font-size: clamp(1.8rem, 3.1vw, 2.65rem); line-height: 1.15; letter-spacing: -.035em; color: #202d39; margin: .45em 0 .65em; }
+    > p { line-height: 1.65; }
+}
+.section-eyebrow, .project-theme { color: #356278; font-size: .72rem; font-weight: 700; letter-spacing: .09em; }
+.phd-notice { border-left: 3px solid #356278; background: #f1f6f8; padding: .75em 1em; margin: 0 0 1.2em; font-size: .9em; p { margin: 0; } }
+.profile-links { display: flex; flex-wrap: wrap; gap: 1.5em; font-size: .9em; margin-top: 1.2em; }
+.page__content h2 { color: #202d39; font-size: 1.6rem; margin-top: 1.8em; }
+.section-lead { color: #64717a; max-width: 760px; }
+.selected-project { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 2rem; padding: 2rem 0; border-bottom: 1px solid #e3e8ec; align-items: start; }
+.project-figure { padding-top: .35em; img { display: block; width: 100%; height: auto; border: 1px solid #e3e8ec; border-radius: 5px; } }
+.project-venue { display: inline-block; color: #6b521b; background: #f8f3e5; font-size: .72rem; padding: .3em .65em; margin-top: .9em; border-radius: 3px; }
+.project-body { min-width: 0; p { margin-top: 0; } h3 { font-size: 1.45rem; color: #202d39; margin: .15em 0 .3em; } }
+.project-question { font-size: 1.1rem; font-weight: 600; color: #344b5b; line-height: 1.4; }
+.project-role { font-size: .78rem; color: #607584; font-weight: 600; }
+.project-evidence { padding: .7em .9em; background: #f3f6f7; border-radius: 4px; font-size: .9em; }
+.citation-details { font-size: .8em; color: #64717a; margin-top: .85em; summary { cursor: pointer; padding: .3em 0; } p { margin-top: .8em; } }
+.additional-project { padding: 1.3em 0; border-bottom: 1px solid #e3e8ec; font-size: .92em; }
+@media (max-width: 700px) {
+    .selected-project { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
+    .project-body { grid-row: 1; }
+    .project-figure { max-width: 500px; }
+    .research-intro h1 { font-size: 1.9rem; }
+}

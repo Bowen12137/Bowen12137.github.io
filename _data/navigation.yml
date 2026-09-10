@@ -1,19 +1,13 @@
-# main links links
 main:
-  - title: "About Me"
+  - title: "About"
     url: "/#about-me"
-
-  - title: "News"
-    url: "/#-news"
-
-  - title: "Publications"
+  - title: "Research"
     url: "/#-publications"
-
+  - title: "News"
+    url: "/#news"
+  - title: "Experience"
+    url: "/#experience"
   - title: "Education"
     url: "/#-educations"
-
-  - title: "Experience"
-    url: "/#-experience"
-
   - title: "CV"
     url: "/Bowen_CV.pdf"
