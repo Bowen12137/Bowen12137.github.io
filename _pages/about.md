@@ -58,7 +58,7 @@ Driving demonstrations do not prescribe a single response: different drivers can
 
 <p class="project-evidence">A dataset and benchmark for personalized end-to-end driving, with an explicit measure of driving-style alignment.</p>
 
-[**Project Page / Code**](https://styledrive.github.io/) • [**arXiv**](https://arxiv.org/abs/2506.23982)
+[**Project Page / Code**](https://styledrive.github.io/) • [**arXiv**](https://arxiv.org/abs/2506.23982) • <a class="gh-stars" href="https://github.com/AIR-THU/StyleDrive" aria-label="StyleDrive on GitHub"><img src="https://img.shields.io/github/stars/AIR-THU/StyleDrive?style=flat&amp;logo=github&amp;label=stars&amp;color=1f6feb" alt="GitHub stars for AIR-THU/StyleDrive"></a>
 
 <details class="citation-details" markdown="1">
 <summary>Paper title &amp; authors</summary>
@@ -86,7 +86,7 @@ For deformable objects, reaching the goal does not establish that the interactio
 
 <p class="project-evidence">4,000 demonstrations · 40 tasks · 50+ deformable assets. FEM-based metrics evaluate deformation alongside task success.</p>
 
-[**Project Page**](https://softvtbench.github.io/) • [**Tuojing Page**](https://tuojingai.github.io/?p=softvtbench) • [**arXiv**](https://arxiv.org/abs/2607.04234)
+[**Project Page**](https://softvtbench.github.io/) • [**Tuojing Page**](https://tuojingai.github.io/?p=softvtbench) • [**arXiv**](https://arxiv.org/abs/2607.04234) • <a class="gh-stars" href="https://github.com/TuojingAI/SoftVTBench" aria-label="SoftVTBench on GitHub"><img src="https://img.shields.io/github/stars/TuojingAI/SoftVTBench?style=flat&amp;logo=github&amp;label=stars&amp;color=1f6feb" alt="GitHub stars for TuojingAI/SoftVTBench"></a>
 
 <details class="citation-details" markdown="1">
 <summary>Paper title &amp; authors</summary>
@@ -114,7 +114,7 @@ A policy can perform well on recorded driving data while remaining vulnerable to
 
 <p class="project-evidence">Closed-loop evaluation tests collision-inducing scenarios and transfer from Waymo Open Motion to nuPlan.</p>
 
-[**Project Page**](https://tuojingai.github.io/?p=counterscene) • [**arXiv**](https://arxiv.org/abs/2603.21104)
+[**Project Page**](https://tuojingai.github.io/?p=counterscene) • [**arXiv**](https://arxiv.org/abs/2603.21104) • <a class="gh-stars" href="https://github.com/TuojingAI/CounterScene" aria-label="CounterScene on GitHub"><img src="https://img.shields.io/github/stars/TuojingAI/CounterScene?style=flat&amp;logo=github&amp;label=stars&amp;color=1f6feb" alt="GitHub stars for TuojingAI/CounterScene"></a>
 
 <details class="citation-details" markdown="1">
 <summary>Paper title &amp; authors</summary>
@@ -146,7 +146,7 @@ Chenchen Ge\*, Hanwen Shen\*, **Bowen Jing**, Jiyuan Cai, Xiaofeng Wang, Hongsen
 
 Calibrating elasticity and density from an object’s response to an applied force, then testing the estimated properties on held-out interactions.
 
-[**Project Page**](https://tuojingai.github.io/?p=knockgs) • [**arXiv**](https://arxiv.org/abs/2608.27365) • [**Code**](https://github.com/TuojingAI/KnockGS)
+[**Project Page**](https://tuojingai.github.io/?p=knockgs) • [**arXiv**](https://arxiv.org/abs/2608.27365) • [**Code**](https://github.com/TuojingAI/KnockGS) • <a class="gh-stars" href="https://github.com/TuojingAI/KnockGS" aria-label="KnockGS on GitHub"><img src="https://img.shields.io/github/stars/TuojingAI/KnockGS?style=flat&amp;logo=github&amp;label=stars&amp;color=1f6feb" alt="GitHub stars for TuojingAI/KnockGS"></a>
 
 </div>
 
@@ -157,7 +157,7 @@ Mingxin Wang, Bin Hu, Bin Qian, Kaitao Jiang, Haoning Wu, Feng Yan, **Bowen Jing
 
 World-action modeling for manipulation under visual distribution shifts. Reported zero-shot LIBERO-Plus improvement of **21.3 points** over Fast-WAM, with real-world success under visual shift increasing from **25.8% to 61.5%**.
 
-[**arXiv**](https://arxiv.org/abs/2607.28993)
+[**arXiv**](https://arxiv.org/abs/2607.28993) • <a class="gh-stars" href="https://github.com/Thu-WangMX/st-wam" aria-label="st-wam on GitHub"><img src="https://img.shields.io/github/stars/Thu-WangMX/st-wam?style=flat&amp;logo=github&amp;label=stars&amp;color=1f6feb" alt="GitHub stars for Thu-WangMX/st-wam"></a>
 
 </div>
 
@@ -168,7 +168,7 @@ Haibao Yu, Kuntao Xiao, Jiahang Wang, Ruiyang Hao, Yuxin Huang, Guoran Hu, Haifa
 
 Feed-forward 4D Gaussian scene reconstruction for autonomous driving, combining static and dynamic representations for efficient novel-view synthesis.
 
-[**Project Page**](https://tuojingai.github.io/?p=recondrive) • [**arXiv**](https://arxiv.org/abs/2603.07552)
+[**Project Page**](https://tuojingai.github.io/?p=recondrive) • [**arXiv**](https://arxiv.org/abs/2603.07552) • <a class="gh-stars" href="https://github.com/TuojingAI/ReconDrive" aria-label="ReconDrive on GitHub"><img src="https://img.shields.io/github/stars/TuojingAI/ReconDrive?style=flat&amp;logo=github&amp;label=stars&amp;color=1f6feb" alt="GitHub stars for TuojingAI/ReconDrive"></a>
 
 </div>
 
