@@ -186,17 +186,17 @@ My MSc dissertation investigated camera–LiDAR fusion with channel attention an
 <span class="anchor" id="-experience"></span>
 
 ## Experience
-- *2025.08 – Present* · **Tuojing Intelligence** — **Tech Lead**, Real2Sim2Real and tactile simulation  
-- *2025.02 – 2025.08* · **Tsinghua University, AIR** — Research Intern in **Large-Scale Autonomous Driving Data Mining**
+- *2025.08 – Present* · <strong class="org org-tuojing">Tuojing Intelligence</strong> — **Tech Lead**, Real2Sim2Real and tactile simulation  
+- *2025.02 – 2025.08* · <strong class="org org-tsinghua">Tsinghua University, AIR</strong> — Research Intern in **Large-Scale Autonomous Driving Data Mining**
 
 <span class="anchor" id="-educations"></span>
 
 ## Education
-- *2023.09 – 2024.09*, MSc in Advanced Computer Science, University of Manchester  
+- *2023.09 – 2024.09*, MSc in Advanced Computer Science, <strong class="org org-manchester">University of Manchester</strong>  
   - Focus: Deep Learning, Computer Vision, Reinforcement Learning, Robotics  
   - Dissertation: Multi-modal Sensor Fusion for End-to-End Autonomous Driving
   - Graduated with Distinction (Top 10%)
 
-- *2020.09 – 2023.06*, BSc in Computer Science, University of Manchester  
+- *2020.09 – 2023.06*, BSc in Computer Science, <strong class="org org-manchester">University of Manchester</strong>  
   - Specialized in software development and machine learning foundations  
   - Final Year Project: Spiking Neural Network
