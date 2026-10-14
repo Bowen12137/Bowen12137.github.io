@@ -15,7 +15,7 @@ redirect_from:
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
 <div class="research-intro" id="about-me" markdown="1">
-<p class="section-eyebrow">PHYSICAL AI · WORLD MODELS · SAFE AI</p>
+<p class="section-eyebrow">🤖 PHYSICAL AI · 🌍 WORLD MODELS · 🛡️ SAFE AI</p>
 
 # Learning from experience. Acting in the physical world.
 
@@ -45,7 +45,7 @@ Long term, I want robots to pursue goals, learn from accumulated experience, and
 <article class="selected-project" aria-labelledby="project-styledrive">
 <div class="project-figure"><a href="https://styledrive.github.io/" aria-label="StyleDrive project page"><img src="_pages/images/styledrive.png" alt="StyleDrive research overview" loading="lazy"></a><span class="project-venue">AAAI 2026 · Oral</span></div>
 <div class="project-body" markdown="1">
-<p class="project-theme">01 / Preserve meaningful behavioral differences</p>
+<p class="project-theme">🚗 01 / Preserve meaningful behavioral differences</p>
 <h3 id="project-styledrive">StyleDrive</h3>
 <p class="project-question">When several actions are valid, whose preference should a policy follow?</p>
 <p class="project-role">Second author</p>
@@ -73,7 +73,7 @@ Ruiyang Hao, **Bowen Jing**, Haibao Yu, Zaiqing Nie
 <article class="selected-project" aria-labelledby="project-softvtbench">
 <div class="project-figure"><a href="https://softvtbench.github.io/" aria-label="SoftVTBench project page"><img src="_pages/images/softvtbench.png" alt="SoftVTBench research overview" loading="lazy"></a><span class="project-venue">ECCV 2026 Workshop · Oral</span></div>
 <div class="project-body" markdown="1">
-<p class="project-theme">02 / Define physically acceptable success</p>
+<p class="project-theme">✋ 02 / Define physically acceptable success</p>
 <h3 id="project-softvtbench">SoftVTBench</h3>
 <p class="project-question">Is a task successful if the object is damaged along the way?</p>
 <p class="project-role">First author</p>
@@ -101,7 +101,7 @@ For deformable objects, reaching the goal does not establish that the interactio
 <article class="selected-project" aria-labelledby="project-counterscene">
 <div class="project-figure"><a href="https://tuojingai.github.io/?p=counterscene" aria-label="CounterScene project page"><img src="_pages/images/counterscene.jpg" alt="CounterScene research overview" loading="lazy"></a><span class="project-venue">ECCV 2026 Workshop · Oral</span></div>
 <div class="project-body" markdown="1">
-<p class="project-theme">03 / Probe the limits of recorded experience</p>
+<p class="project-theme">🌍 03 / Probe the limits of recorded experience</p>
 <h3 id="project-counterscene">CounterScene</h3>
 <p class="project-question">How can we expose failures that routine experience rarely reveals?</p>
 <p class="project-role">First author</p>
@@ -141,7 +141,7 @@ A policy can perform well on recorded driving data while remaining vulnerable to
 
 <div class="additional-project" markdown="1">
 
-[**KnockGS: Interaction-Grounded Calibration of Physical Gaussian Representations**](https://arxiv.org/abs/2608.27365)  
+🧪 [**KnockGS: Interaction-Grounded Calibration of Physical Gaussian Representations**](https://arxiv.org/abs/2608.27365)  
 Chenchen Ge\*, Hanwen Shen\*, **Bowen Jing**, Jiyuan Cai, Xiaofeng Wang, Hongsen Lei, Weitao Zhou, Dandan Zhang, Haibao Yu  
 
 Calibrating elasticity and density from an object’s response to an applied force, then testing the estimated properties on held-out interactions.
@@ -152,7 +152,7 @@ Calibrating elasticity and density from an object’s response to an applied for
 
 <div class="additional-project" markdown="1">
 
-[**ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts**](https://arxiv.org/abs/2607.28993)  
+🤖 [**ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts**](https://arxiv.org/abs/2607.28993)  
 Mingxin Wang, Bin Hu, Bin Qian, Kaitao Jiang, Haoning Wu, Feng Yan, **Bowen Jing**, Ruiyang Hao, Enyi Wang, Kangning Niu, Yandan Yang, Mu Xu, Yan Wang, Houde Liu, Tianlun Li  
 
 World-action modeling for manipulation under visual distribution shifts. Reported zero-shot LIBERO-Plus improvement of **21.3 points** over Fast-WAM, with real-world success under visual shift increasing from **25.8% to 61.5%**.
@@ -163,7 +163,7 @@ World-action modeling for manipulation under visual distribution shifts. Reporte
 
 <div class="additional-project" markdown="1">
 
-[**ReconDrive: Fast Feed-Forward 4D Gaussian Splatting for Autonomous Driving Scene Reconstruction**](https://arxiv.org/abs/2603.07552)  
+🚗 [**ReconDrive: Fast Feed-Forward 4D Gaussian Splatting for Autonomous Driving Scene Reconstruction**](https://arxiv.org/abs/2603.07552)  
 Haibao Yu, Kuntao Xiao, Jiahang Wang, Ruiyang Hao, Yuxin Huang, Guoran Hu, Haifang Qin, **Bowen Jing**, Yuntian Bo, Ping Luo  
 
 Feed-forward 4D Gaussian scene reconstruction for autonomous driving, combining static and dynamic representations for efficient novel-view synthesis.
@@ -174,7 +174,7 @@ Feed-forward 4D Gaussian scene reconstruction for autonomous driving, combining 
 
 <div class="additional-project" markdown="1">
 
-[**Multi-modal Sensor Fusion for End-to-End Autonomous Driving**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
+🚗 [**Multi-modal Sensor Fusion for End-to-End Autonomous Driving**](https://drive.google.com/file/d/1th9M1kdggCL_x-zmeAltJgVP9Lmgc4fn/view?usp=sharing)  
 **Bowen Jing** — University of Manchester, MSc dissertation
 
 My MSc dissertation investigated camera–LiDAR fusion with channel attention and GRU waypoint prediction, evaluated closed-loop in CARLA across urban scenes and weather conditions.
