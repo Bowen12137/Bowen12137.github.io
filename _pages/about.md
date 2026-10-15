@@ -76,7 +76,7 @@ Ruiyang Hao, **Bowen Jing**, Haibao Yu, Zaiqing Nie
 <p class="project-theme">✋ 02 / Define physically acceptable success</p>
 <h3 id="project-softvtbench">SoftVTBench</h3>
 <p class="project-question">Is a task successful if the object is damaged along the way?</p>
-<p class="project-role">Co-first author</p>
+<p class="project-role">First author</p>
 
 For deformable objects, reaching the goal does not establish that the interaction was acceptable. A robot may finish the task while excessively deforming the object. SoftVTBench treats the physical consequences of contact as part of the problem definition, making this distinction measurable.
 
