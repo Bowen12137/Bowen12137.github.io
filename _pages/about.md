@@ -86,12 +86,12 @@ For deformable objects, reaching the goal does not establish that the interactio
 
 <p class="project-evidence">4,000 demonstrations · 40 tasks · 50+ deformable assets. FEM-based metrics evaluate deformation alongside task success.</p>
 
-[**Project Page**](https://softvtbench.github.io/) • [**Tuojing Page**](https://tuojingai.github.io/?p=softvtbench) • [**arXiv**](https://arxiv.org/abs/2607.04234) • <a class="gh-stars" href="https://github.com/TuojingAI/SoftVTBench" aria-label="SoftVTBench on GitHub"><img src="https://img.shields.io/github/stars/TuojingAI/SoftVTBench?style=flat&amp;logo=github&amp;label=stars&amp;color=1f6feb" alt="GitHub stars for TuojingAI/SoftVTBench"></a>
+[**Project Page**](https://softvtbench.github.io/) • [**Tuojing Page**](https://tuojingai.github.io/?p=softvtbench) • [**arXiv**](https://arxiv.org/abs/2608.18701) • [**Early Version (ECCVW)**](https://arxiv.org/abs/2607.04234) • <a class="gh-stars" href="https://github.com/TuojingAI/SoftVTBench" aria-label="SoftVTBench on GitHub"><img src="https://img.shields.io/github/stars/TuojingAI/SoftVTBench?style=flat&amp;logo=github&amp;label=stars&amp;color=1f6feb" alt="GitHub stars for TuojingAI/SoftVTBench"></a>
 
 <details class="citation-details" markdown="1">
 <summary>Paper title &amp; authors</summary>
 
-[**SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation**](https://arxiv.org/abs/2607.04234)  
+[**SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation**](https://arxiv.org/abs/2608.18701)  
 **Bowen Jing\***, Mingxin Wang\*, Ruiyang Hao, Chenchen Ge, Hanwen Shen, Junjie He, Yang Cui, Yiming Hou, Weitao Zhou, Jiawei Wang, Minglei Li, Dandan Zhang, Ding Zhao, Houde Liu, Xiaofan Li, Si Liu, Ping Luo, Haibao Yu  
 
 </details>
@@ -129,15 +129,28 @@ A policy can perform well on recorded driving data while remaining vulnerable to
 <span class="anchor" id="-news"></span>
 
 ## News
+- *2026.10*: &nbsp;🦾 Our paper **"LLM4Robot-Bench: How Far Can GPT-6 Astra Go in Robotic Manipulation? A Hierarchical, Paired Sim-Real Benchmark"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2610.34527)  
 - *2026.09*: &nbsp;🏆 Early versions of **SoftVTBench** and **CounterScene** were accepted as **Orals** at the **Safe World Models for Trustworthy Embodied AI** workshop, [ECCV 2026](https://trustworthy-world-models.github.io/ECCV2026/).  
 - *2026.08*: &nbsp;🪨 Our paper **"KnockGS: Interaction-Grounded Calibration of Physical Gaussian Representations"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2608.27365) · [Code](https://github.com/TuojingAI/KnockGS)  
 - *2026.07*: &nbsp;🤖 Our paper **"ST-WAM: Semantic-Temporal World Action Model for Robust Manipulation under Visual Distribution Shifts"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2607.28993)  
+- *2026.08*: &nbsp;🧈 The full **SoftVTBench** paper (4,000 demonstrations, 40 tasks, 50+ assets) is now on **arXiv**! [Read here](https://arxiv.org/abs/2608.18701)  
 - *2026.07*: &nbsp;🧈 Released **SoftVTBench**, a deformation-aware visuo-tactile dataset and benchmark for deformable-object manipulation. [arXiv](https://arxiv.org/abs/2607.04234) · [Project Page](https://softvtbench.github.io/)  
 - *2026.03*: &nbsp;🌍 Our paper **"CounterScene: Counterfactual Causal Reasoning in Generative World Models for Safety-Critical Closed-Loop Evaluation"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2603.21104)  
 - *2026.03*: &nbsp;🏗️ Our paper **"ReconDrive: Fast Feed-Forward 4D Gaussian Splatting for Autonomous Driving Scene Reconstruction"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2603.07552)  
 - *2025.11*: &nbsp;🏆 Our work **StyleDrive** has been **accepted as an Oral presentation at AAAI 2026**.
 
 ## Additional Research
+
+<div class="additional-project" markdown="1">
+
+🦾 [**LLM4Robot-Bench: How Far Can GPT-6 Astra Go in Robotic Manipulation? A Hierarchical, Paired Sim-Real Benchmark**](https://arxiv.org/abs/2610.34527)  
+Haibao Yu, Jiaqi Meng, Zijian Zhang, **Bowen Jing**, Lei Yang, Yue Hu, Chenchen Ge, Yiming Hou, Chenbo Xin, Dawen Ye, Haifang Qin, Jin Li, Weitao Zhou, Jianing Qiu, Jiankai Sun, Dandan Zhang, Zaiqing Nie, Ping Luo, Ding Zhao  
+
+Sixteen household contact-rich tasks across three cumulative levels (contact selection, force regulation, contact reconfiguration), each built in physically and visually matched simulation and real-world setups. Zero-shot real-world success falls from **80.0%** at L1 to **47.6%** at L2 and **0%** at L3; 10 of 16 tasks have identical success counts in sim and real.
+
+[**arXiv**](https://arxiv.org/abs/2610.34527)
+
+</div>
 
 <div class="additional-project" markdown="1">
 
