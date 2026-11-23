@@ -174,7 +174,7 @@ A collision objective alone does not say which interaction is being tested: a le
 <summary>Paper title &amp; authors</summary>
 
 [**CrashDojo: Accident-Grounded World Models as Closed-Loop Safety Examiners for Autonomous Driving Planners**](https://crashdojo.github.io/)  
-**Bowen Jing\***, Haoyun Tang\*, Ruiyang Hao, Chenchen Ge, Weitao Zhou, Haibao Yu  
+**Bowen Jing**, Haoyun Tang, Ruiyang Hao, Chenchen Ge, Weitao Zhou, Haibao Yu  
 
 </details>
 </div>
