@@ -23,7 +23,7 @@ redirect_from:
 **Seeking PhD opportunities** in Physical AI, world models, and safe embodied robotics. [Get in touch](mailto:Arthur12137@gmail.com) · [View CV](/Bowen_CV.pdf) · [中文简历](/Bowen_CV_zh.pdf)
 </div>
 
-I am **Bowen Jing (荆博闻)**, Tech Lead at **Tuojing Intelligence** and a master's graduate of the **University of Manchester**. My research connects **Physical AI, World Models, and Safe AI** in embodied robotics: understanding physical interactions, anticipating action consequences, and making safety part of successful task execution. **My core work is building physical environments for robots through Real2Sim2Real**: measuring real objects and interactions, turning them into physics-grounded simulation, and validating what is learned and evaluated there back on real robots.
+I am **Bowen Jing (荆博闻)**, Tech Lead at **Tuojing Intelligence** and a master's graduate of the **University of Manchester**. My research connects **Physical AI, World Models, and Safe AI** in embodied robotics: understanding physical interactions, anticipating action consequences, and making safety part of successful task execution. **My core work is building physical environments for robots through Real2Sim2Real**: measuring real objects and interactions, turning them into physics-grounded simulation, and validating what is learned and evaluated there back on real robots. The goal is simulation that can support real-robot decisions: whether generated data trains policies that work on the real robot, whether simulated evaluation can guide policy selection, and whether success metrics reflect the quality of contact-rich manipulation.
 
 **I approach these questions through the design of data distributions.** Within the observed distribution, policies should preserve and express meaningful behavioral preferences rather than average them away. Beyond its coverage, I pursue targeted generation of rare, safety-critical scenarios for learning and evaluation. The question is which experiences a robot needs—and how to construct and evaluate them.
 
@@ -183,6 +183,7 @@ A collision objective alone does not say which interaction is being tested: a le
 <span class="anchor" id="-news"></span>
 
 ## News
+- *2026.11*: &nbsp;🧠 Our paper **"ThinkWAM: Rethinking Latent Futures for Action Refinement"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2611.21258) · [Project Page](https://thinkwam-project.github.io/)  
 - *2026.11*: &nbsp;🚦 **CrashDojo**: accident-grounded world models as closed-loop safety examiners for driving planners. [Project Page](https://crashdojo.github.io/)  
 - *2026.11*: &nbsp;🦾 Submitted **PhysFoundry** (Real2Sim2Real benchmark for dexterous manipulation) and the full **CounterScene** paper to **CVPR 2027**.  
 - *2026.10*: &nbsp;🦾 Our paper **"LLM4Robot-Bench: How Far Can GPT-6 Astra Go in Robotic Manipulation? A Hierarchical, Paired Sim-Real Benchmark"** is now on **arXiv**! [Read here](https://arxiv.org/abs/2610.34527)  
@@ -196,6 +197,17 @@ A collision objective alone does not say which interaction is being tested: a le
 - *2025.11*: &nbsp;🏆 Our work **StyleDrive** has been **accepted as an Oral presentation at AAAI 2026**.
 
 ## Additional Research
+
+<div class="additional-project" markdown="1">
+
+🧠 [**ThinkWAM: Rethinking Latent Futures for Action Refinement**](https://thinkwam-project.github.io/)  
+Haoyun Tang, Baqiao Deng, Enjin Zhou, Songwen Tian, Keyao Xu, **Bowen Jing**, Kun Wang, Ke Ma, Zhandong Mei, Huibin Li  
+
+A latent world-action model with a propose–rethink–refine loop: the proposed action chunk corrects multi-horizon future latents, which then guide a second pass that generates the executable chunk. **98.70%** on LIBERO, **84.76%** on LIBERO-Plus without OOD fine-tuning, and **64.4%** mean success across three real-world OOD conditions.
+
+[**Project Page**](https://thinkwam-project.github.io/) • [**arXiv**](https://arxiv.org/abs/2611.21258) • [**Code**](https://github.com/HaoyunT/Thinkwam) • <a class="gh-stars" href="https://github.com/HaoyunT/Thinkwam" aria-label="ThinkWAM on GitHub"><img src="https://img.shields.io/github/stars/HaoyunT/Thinkwam?style=flat&amp;logo=github&amp;label=stars&amp;color=1f6feb" alt="GitHub stars for HaoyunT/Thinkwam"></a>
+
+</div>
 
 <div class="additional-project" markdown="1">
 
