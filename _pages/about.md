@@ -158,7 +158,7 @@ A policy can perform well on recorded driving data while remaining vulnerable to
 <p class="project-theme">🚦 05 / Examine planners with accident-grounded encounters</p>
 <h3 id="project-crashdojo">CrashDojo</h3>
 <p class="project-question">Which actor should challenge the planner, with what maneuver, and how hard?</p>
-<p class="project-role">Co-first author</p>
+<p class="project-role">First author</p>
 
 A collision objective alone does not say which interaction is being tested: a lead vehicle braking and a neighbor cutting in both cause contact but demand different responses. CrashDojo turns a traffic world model into a closed-loop safety examiner whose challenges are specified before the rollout and grounded in accident evidence.
 
