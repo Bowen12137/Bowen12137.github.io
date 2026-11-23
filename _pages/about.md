@@ -23,13 +23,13 @@ redirect_from:
 **Seeking PhD opportunities** in Physical AI, world models, and safe embodied robotics. [Get in touch](mailto:Arthur12137@gmail.com) · [View CV](/Bowen_CV.pdf) · [中文简历](/Bowen_CV_zh.pdf)
 </div>
 
-I am **Bowen Jing (荆博闻)**, Tech Lead at **Tuojing Intelligence** and a master's graduate of the **University of Manchester**. My research connects **Physical AI, World Models, and Safe AI** in embodied robotics: understanding physical interactions, anticipating action consequences, and making safety part of successful task execution.
+I am **Bowen Jing (荆博闻)**, Tech Lead at **Tuojing Intelligence** and a master's graduate of the **University of Manchester**. My research connects **Physical AI, World Models, and Safe AI** in embodied robotics: understanding physical interactions, anticipating action consequences, and making safety part of successful task execution. **My core work is building physical environments for robots through Real2Sim2Real**: measuring real objects and interactions, turning them into physics-grounded simulation, and validating what is learned and evaluated there back on real robots.
 
 **I approach these questions through the design of data distributions.** Within the observed distribution, policies should preserve and express meaningful behavioral preferences rather than average them away. Beyond its coverage, I pursue targeted generation of rare, safety-critical scenarios for learning and evaluation. The question is which experiences a robot needs—and how to construct and evaluate them.
 
 My methods include **vision-language-action models (VLA)** and **world-action models (WAM)** for connecting perception, prediction, and control, alongside **diffusion and flow matching** for generative modeling and controlled sampling. These methods support learning from behavioral diversity and constructing experience beyond routine data collection.
 
-**Reproducing a trajectory is only one part of reproducing an interaction.** My **Real2Sim / Sim2Real** agenda connects environment properties with robot dynamics, considering approach velocity, hand preshaping, contact timing and sequence, and the resulting forces, deformation, and slip. Vision and touch ground this work in physical feedback.
+**Reproducing a trajectory is only one part of reproducing an interaction.** My **Real2Sim2Real** agenda connects environment properties with robot dynamics, considering approach velocity, hand preshaping, contact timing and sequence, and the resulting forces, deformation, and slip. Vision and touch ground this work in physical feedback.
 
 Long term, I want robots to pursue goals, learn from accumulated experience, and adapt through interaction, enabling safe participation in everyday human life.
 
