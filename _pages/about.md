@@ -153,7 +153,7 @@ A policy can perform well on recorded driving data while remaining vulnerable to
 </article>
 
 <article class="selected-project" aria-labelledby="project-crashdojo">
-<div class="project-figure"><a href="https://crashdojo.github.io/" aria-label="CrashDojo project page"><img src="_pages/images/crashdojo.jpg" alt="CrashDojo research overview" loading="lazy"></a><span class="project-venue">Preprint · 2026</span></div>
+<div class="project-figure"><a href="https://crashdojo.github.io/" aria-label="CrashDojo project page"><img src="_pages/images/crashdojo.jpg?v=2" alt="CrashDojo framework: offline accident-grounded scene preparation and online closed-loop evaluation" loading="lazy"></a><span class="project-venue">Preprint · 2026</span></div>
 <div class="project-body" markdown="1">
 <p class="project-theme">🚦 05 / Examine planners with accident-grounded encounters</p>
 <h3 id="project-crashdojo">CrashDojo</h3>
